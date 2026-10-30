@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="./public/aureus-brand-banner.svg" alt="AUREUS VELOCE — The Sovereign Kinetic" width="100%" />
+  <img src="public/aureus-brand-banner.png" alt="AUREUS VELOCE — The Sovereign Kinetic" width="100%" />
 
   <br/><br/>
 
