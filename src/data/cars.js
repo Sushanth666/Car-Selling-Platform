@@ -1,0 +1,1815 @@
+// Master dataset for Apex Atelier India - Luxury, Supercars & Exotic Fleet
+// Exclusively configured for Indian High-Net-Worth Connoisseurs with INR (₹ Cr) pricing,
+// Metric telemetry (km/h & 0-100 km/h), RHD configuration, and Real-Time Paint Customization.
+
+export const CARS_DATA = [
+  {
+    "id": "porsche-911-gt3-rs",
+    "name": "Porsche 911 GT3 RS",
+    "brand": "Porsche",
+    "model": "911 GT3 RS (992)",
+    "year": 2025,
+    "category": "Supercars",
+    "price": 35100000,
+    "priceFormatted": "₹3.51 Cr",
+    "horsepower": 518,
+    "topSpeed": "296 km/h",
+    "topSpeedNum": 296,
+    "acceleration": "3.0s",
+    "accelerationNum": 3,
+    "engine": "4.0L Naturally Aspirated Boxer-6",
+    "transmission": "7-Speed Dual-Clutch (PDK)",
+    "drivetrain": "Rear-Wheel Drive (RWD)",
+    "fuelType": "Gasoline",
+    "bodyType": "Coupe",
+    "curbWeight": "1,450 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "High-revving 9,000 RPM screamer with active titanium flap valves",
+    "defaultImage": "/cars/porsche-911-gt3-rs.jpg",
+    "heroImage": "/cars/porsche-911-gt3-rs.jpg",
+    "defaultColour": {
+      "name": "Guards Red",
+      "hex": "#D91424",
+      "finish": "Gloss",
+      "image": "/cars/colors/porsche-911-gt3-rs-red.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Guards Red",
+        "hex": "#D91424",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-red.jpg"
+      },
+      {
+        "name": "Arctic Silver Metallic",
+        "hex": "#C0C0C0",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-911-gt3-rs-silver.jpg"
+      },
+      {
+        "name": "Shark Blue",
+        "hex": "#00629B",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-blue.jpg"
+      },
+      {
+        "name": "Racing Yellow",
+        "hex": "#F9D71C",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-yellow.jpg"
+      },
+      {
+        "name": "Python Green",
+        "hex": "#2BB673",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-green.jpg"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#111111",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-911-gt3-rs-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Arctic Silver Metallic": "/cars/colors/porsche-911-gt3-rs-silver.jpg",
+      "Guards Red": "/cars/colors/porsche-911-gt3-rs-red.jpg",
+      "Shark Blue": "/cars/colors/porsche-911-gt3-rs-blue.jpg",
+      "Racing Yellow": "/cars/colors/porsche-911-gt3-rs-yellow.jpg",
+      "Python Green": "/cars/colors/porsche-911-gt3-rs-green.jpg",
+      "Jet Black": "/cars/colors/porsche-911-gt3-rs-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/porsche-911-gt3-rs.jpg",
+      "/cars/colors/porsche-911-gt3-rs-red.jpg",
+      "/cars/colors/porsche-911-gt3-rs-blue.jpg",
+      "/cars/colors/porsche-911-gt3-rs-yellow.jpg",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1611651338412-8403fa6e3599?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Active Aerodynamics with F1-derived DRS (Drag Reduction System)",
+      "Weissach Package with Exposed Carbon-Weave Bonnet & Roof",
+      "PCCB Ceramic Composite Brakes with 410mm front discs",
+      "Hydraulic Front Axle Lift system (essential for Indian speed breakers)",
+      "Right-Hand Drive (RHD) Indian road specification with BS6 Phase 2 compliance",
+      "Steering wheel rotary dials for Rebound, Compression & Diff lock"
+    ],
+    "description": "The 911 GT3 RS is unapologetically engineered for motorsport supremacy on both the Buddh International Circuit and open coastal expressways. Generating 860 kg of aerodynamic downforce, it is India's most exhilarating track-weapon.",
+    "rating": 4.95,
+    "reviewsCount": 42,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "Track Legend",
+    "stockStatus": "Available in Mumbai Atelier (BKC)",
+    "mileage": "120 km",
+    "vin": "WP0AF2A97NS298101",
+    "colors": [
+      {
+        "name": "Guards Red",
+        "hex": "#D91424",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-red.jpg"
+      },
+      {
+        "name": "Arctic Silver Metallic",
+        "hex": "#C0C0C0",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-911-gt3-rs-silver.jpg"
+      },
+      {
+        "name": "Shark Blue",
+        "hex": "#00629B",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-blue.jpg"
+      },
+      {
+        "name": "Racing Yellow",
+        "hex": "#F9D71C",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-yellow.jpg"
+      },
+      {
+        "name": "Python Green",
+        "hex": "#2BB673",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-911-gt3-rs-green.jpg"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#111111",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-911-gt3-rs-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/porsche-911-gt3-rs.jpg",
+      "/cars/colors/porsche-911-gt3-rs-red.jpg",
+      "/cars/colors/porsche-911-gt3-rs-blue.jpg",
+      "/cars/colors/porsche-911-gt3-rs-yellow.jpg",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1611651338412-8403fa6e3599?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "ferrari-sf90-stradale",
+    "name": "Ferrari SF90 Stradale",
+    "brand": "Ferrari",
+    "model": "SF90 Stradale Assetto Fiorano",
+    "year": 2025,
+    "category": "Hypercars",
+    "price": 75000000,
+    "priceFormatted": "₹7.50 Cr",
+    "horsepower": 986,
+    "topSpeed": "340 km/h",
+    "topSpeedNum": 340,
+    "acceleration": "2.5s",
+    "accelerationNum": 2.5,
+    "engine": "4.0L Twin-Turbo V8 + 3 Electric Motors",
+    "transmission": "8-Speed Dual-Clutch F1",
+    "drivetrain": "All-Wheel Drive (e-4WD)",
+    "fuelType": "Plug-in Hybrid (PHEV)",
+    "bodyType": "Coupe",
+    "curbWeight": "1,570 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Harmonic twin-turbo crescendo with instant electric torque kick",
+    "defaultImage": "/cars/ferrari-sf90-stradale.jpg",
+    "heroImage": "/cars/ferrari-sf90-stradale.jpg",
+    "defaultColour": {
+      "name": "Rosso Corsa",
+      "hex": "#D40000",
+      "finish": "Gloss",
+      "image": "/cars/colors/ferrari-sf90-stradale-red.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Rosso Corsa",
+        "hex": "#D40000",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-sf90-stradale-red.jpg"
+      },
+      {
+        "name": "Giallo Modena",
+        "hex": "#FFD700",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-sf90-stradale-yellow.jpg"
+      },
+      {
+        "name": "Nero Daytona",
+        "hex": "#121212",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-black.jpg"
+      },
+      {
+        "name": "Blu Corsa",
+        "hex": "#1560BD",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-blue.jpg"
+      },
+      {
+        "name": "Argento Nürburgring",
+        "hex": "#C4C4C4",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-silver.jpg"
+      }
+    ],
+    "colourImages": {
+      "Rosso Corsa": "/cars/colors/ferrari-sf90-stradale-red.jpg",
+      "Giallo Modena": "/cars/colors/ferrari-sf90-stradale-yellow.jpg",
+      "Nero Daytona": "/cars/colors/ferrari-sf90-stradale-black.jpg",
+      "Blu Corsa": "/cars/colors/ferrari-sf90-stradale-blue.jpg",
+      "Argento Nürburgring": "/cars/colors/ferrari-sf90-stradale-silver.jpg"
+    },
+    "galleryImages": [
+      "/cars/ferrari-sf90-stradale.jpg",
+      "/cars/colors/ferrari-sf90-stradale-yellow.jpg",
+      "/cars/colors/ferrari-sf90-stradale-blue.jpg",
+      "/cars/colors/ferrari-sf90-stradale-silver.jpg",
+      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "1,000 CV combined powertrain with zero-emissions e-Drive city mode",
+      "Assetto Fiorano weight-reduction specification with Multimatic shock absorbers",
+      "Carbon-fiber rear spoiler generating 390 kg of downforce at 250 km/h",
+      "Brembo carbon-ceramic brake system with integrated front-axle lift",
+      "Indian Customs Homologated & ARAI Green Channel Cleared",
+      "Curated Tailor Made bespoke cockpit with Alcantara & Nero leather"
+    ],
+    "description": "Maranello's hybrid magnum opus. 986 brake horsepower catapults the SF90 to 100 km/h in an earth-shattering 2.5 seconds, rewriting the physics of velocity on Indian soil.",
+    "rating": 4.98,
+    "reviewsCount": 38,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "1,000 CV Hybrid",
+    "stockStatus": "Available in New Delhi Atelier (Aerocity)",
+    "mileage": "80 km",
+    "vin": "ZFF90NFA8P0281903",
+    "colors": [
+      {
+        "name": "Rosso Corsa",
+        "hex": "#D40000",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-sf90-stradale-red.jpg"
+      },
+      {
+        "name": "Giallo Modena",
+        "hex": "#FFD700",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-sf90-stradale-yellow.jpg"
+      },
+      {
+        "name": "Nero Daytona",
+        "hex": "#121212",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-black.jpg"
+      },
+      {
+        "name": "Blu Corsa",
+        "hex": "#1560BD",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-blue.jpg"
+      },
+      {
+        "name": "Argento Nürburgring",
+        "hex": "#C4C4C4",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-sf90-stradale-silver.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/ferrari-sf90-stradale.jpg",
+      "/cars/colors/ferrari-sf90-stradale-yellow.jpg",
+      "/cars/colors/ferrari-sf90-stradale-blue.jpg",
+      "/cars/colors/ferrari-sf90-stradale-silver.jpg",
+      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "lamborghini-revuelto",
+    "name": "Lamborghini Revuelto",
+    "brand": "Lamborghini",
+    "model": "Revuelto HPEV V12",
+    "year": 2025,
+    "category": "Hypercars",
+    "price": 88900000,
+    "priceFormatted": "₹8.89 Cr",
+    "horsepower": 1001,
+    "topSpeed": "350 km/h",
+    "topSpeedNum": 350,
+    "acceleration": "2.5s",
+    "accelerationNum": 2.5,
+    "engine": "6.5L Naturally Aspirated V12 + 3 Electric Motors",
+    "transmission": "8-Speed Dual-Clutch Transverse",
+    "drivetrain": "All-Wheel Drive (Electric Torque Vectoring)",
+    "fuelType": "Plug-in Hybrid (HPEV)",
+    "bodyType": "Coupe",
+    "curbWeight": "1,772 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Ferocious naturally-aspirated 9,500 RPM V12 sonic roar",
+    "defaultImage": "/cars/lamborghini-revuelto.jpg",
+    "heroImage": "/cars/lamborghini-revuelto.jpg",
+    "defaultColour": {
+      "name": "Arancio Apodis",
+      "hex": "#FF5E00",
+      "finish": "Metallic",
+      "image": "/cars/colors/lamborghini-revuelto-orange.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Arancio Apodis",
+        "hex": "#FF5E00",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-orange.jpg"
+      },
+      {
+        "name": "Verde Mantis",
+        "hex": "#44D62C",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-revuelto-green.jpg"
+      },
+      {
+        "name": "Giallo Belenus",
+        "hex": "#FFE600",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-yellow.jpg"
+      },
+      {
+        "name": "Bianco Monocerus",
+        "hex": "#F4F4F4",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-revuelto-white.jpg"
+      },
+      {
+        "name": "Grigio Telesto",
+        "hex": "#5A6268",
+        "finish": "Matte",
+        "image": "/cars/colors/lamborghini-revuelto-grey.jpg"
+      },
+      {
+        "name": "Nero Noctis",
+        "hex": "#1A1A1A",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Arancio Apodis": "/cars/colors/lamborghini-revuelto-orange.jpg",
+      "Verde Mantis": "/cars/colors/lamborghini-revuelto-green.jpg",
+      "Giallo Belenus": "/cars/colors/lamborghini-revuelto-yellow.jpg",
+      "Bianco Monocerus": "/cars/colors/lamborghini-revuelto-white.jpg",
+      "Grigio Telesto": "/cars/colors/lamborghini-revuelto-grey.jpg",
+      "Nero Noctis": "/cars/colors/lamborghini-revuelto-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/lamborghini-revuelto.jpg",
+      "/cars/colors/lamborghini-revuelto-green.jpg",
+      "/cars/colors/lamborghini-revuelto-yellow.jpg",
+      "/cars/colors/lamborghini-revuelto-white.jpg",
+      "/cars/colors/lamborghini-revuelto-black.jpg",
+      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "All-new carbon monofuselage architecture with aerospace forged composite front",
+      "Tri-motor hybrid system boosting naturally aspirated V12 to 1,015 PS",
+      "Signature scissor doors with active aero rear wing generating 61% more downforce",
+      "Front-axle hydraulic lift with GPS location memory for Indian speed breakers",
+      "Right-Hand Drive (RHD) allocation with full ARAI compliance",
+      "13 dynamic drive modes including Città (City), Strada, Sport, and Corsa"
+    ],
+    "description": "The successor to the Aventador is Sant'Agata's first HPEV V12 super sports car. With over 1,000 Italian horses and an unhinged 9,500 RPM soundtrack, the Revuelto heralds a new era of visceral electrification.",
+    "rating": 4.97,
+    "reviewsCount": 51,
+    "isFeatured": true,
+    "isNewArrival": true,
+    "badge": "1,015 PS Flagship",
+    "stockStatus": "Available in Bengaluru Atelier (UB City)",
+    "mileage": "45 km",
+    "vin": "ZHWUB1ZD8PLA01923",
+    "colors": [
+      {
+        "name": "Arancio Apodis",
+        "hex": "#FF5E00",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-orange.jpg"
+      },
+      {
+        "name": "Verde Mantis",
+        "hex": "#44D62C",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-revuelto-green.jpg"
+      },
+      {
+        "name": "Giallo Belenus",
+        "hex": "#FFE600",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-yellow.jpg"
+      },
+      {
+        "name": "Bianco Monocerus",
+        "hex": "#F4F4F4",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-revuelto-white.jpg"
+      },
+      {
+        "name": "Grigio Telesto",
+        "hex": "#5A6268",
+        "finish": "Matte",
+        "image": "/cars/colors/lamborghini-revuelto-grey.jpg"
+      },
+      {
+        "name": "Nero Noctis",
+        "hex": "#1A1A1A",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-revuelto-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/lamborghini-revuelto.jpg",
+      "/cars/colors/lamborghini-revuelto-green.jpg",
+      "/cars/colors/lamborghini-revuelto-yellow.jpg",
+      "/cars/colors/lamborghini-revuelto-white.jpg",
+      "/cars/colors/lamborghini-revuelto-black.jpg",
+      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "mclaren-750s-spider",
+    "name": "McLaren 750S Spider",
+    "brand": "McLaren",
+    "model": "750S Spider Performance",
+    "year": 2025,
+    "category": "Supercars",
+    "price": 59100000,
+    "priceFormatted": "₹5.91 Cr",
+    "horsepower": 740,
+    "topSpeed": "332 km/h",
+    "topSpeedNum": 332,
+    "acceleration": "2.8s",
+    "accelerationNum": 2.8,
+    "engine": "4.0L Twin-Turbo Flat-Plane V8",
+    "transmission": "7-Speed Dual-Clutch Seamless Shift (SSG)",
+    "drivetrain": "Rear-Wheel Drive (RWD)",
+    "fuelType": "Gasoline",
+    "bodyType": "Convertible / Spider",
+    "curbWeight": "1,438 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Central stainless-steel exhaust trumpet with piercing high-frequency crescendo",
+    "defaultImage": "/cars/mclaren-750s-spider.jpg",
+    "heroImage": "/cars/mclaren-750s-spider.jpg",
+    "defaultColour": {
+      "name": "McLaren Orange",
+      "hex": "#FF8000",
+      "finish": "Metallic",
+      "image": "/cars/colors/mclaren-750s-spider-orange.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "McLaren Orange",
+        "hex": "#FF8000",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-orange.jpg"
+      },
+      {
+        "name": "Silica White",
+        "hex": "#F5F5F7",
+        "finish": "Gloss",
+        "image": "/cars/colors/mclaren-750s-spider-white.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#161618",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-black.jpg"
+      },
+      {
+        "name": "Saros Blue",
+        "hex": "#1B4D89",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-blue.jpg"
+      },
+      {
+        "name": "Volcano Red",
+        "hex": "#B31B1B",
+        "finish": "Perlescent",
+        "image": "/cars/colors/mclaren-750s-spider-red.jpg"
+      }
+    ],
+    "colourImages": {
+      "McLaren Orange": "/cars/colors/mclaren-750s-spider-orange.jpg",
+      "Silica White": "/cars/colors/mclaren-750s-spider-white.jpg",
+      "Onyx Black": "/cars/colors/mclaren-750s-spider-black.jpg",
+      "Saros Blue": "/cars/colors/mclaren-750s-spider-blue.jpg",
+      "Volcano Red": "/cars/colors/mclaren-750s-spider-red.jpg"
+    },
+    "galleryImages": [
+      "/cars/mclaren-750s-spider.jpg",
+      "/cars/colors/mclaren-750s-spider-white.jpg",
+      "/cars/colors/mclaren-750s-spider-blue.jpg",
+      "/cars/colors/mclaren-750s-spider-red.jpg",
+      "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Carbon Fibre Monocage II-S with retractable hardtop deploying in 11 seconds",
+      "Hydraulic cross-linked Proactive Chassis Control III suspension",
+      "30 kg lighter than 720S with segment-leading power-to-weight ratio",
+      "Active rear wing with DRS function and airbrake stabilization",
+      "Right-Hand Drive (RHD) Indian specification with 4-second vehicle lift",
+      "Bespoke Bowers & Wilkins 12-speaker surround sound system"
+    ],
+    "description": "Lighter, sharper, and more ferocious than its predecessor. The 750S Spider delivers pure open-top theatre, accelerating to 100 km/h in 2.8 seconds with telepathic hydraulic steering feedback.",
+    "rating": 4.93,
+    "reviewsCount": 33,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "Ultra-Lightweight Spider",
+    "stockStatus": "Available in Mumbai Atelier (BKC)",
+    "mileage": "110 km",
+    "vin": "SBM14DAB0PW009841",
+    "colors": [
+      {
+        "name": "McLaren Orange",
+        "hex": "#FF8000",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-orange.jpg"
+      },
+      {
+        "name": "Silica White",
+        "hex": "#F5F5F7",
+        "finish": "Gloss",
+        "image": "/cars/colors/mclaren-750s-spider-white.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#161618",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-black.jpg"
+      },
+      {
+        "name": "Saros Blue",
+        "hex": "#1B4D89",
+        "finish": "Metallic",
+        "image": "/cars/colors/mclaren-750s-spider-blue.jpg"
+      },
+      {
+        "name": "Volcano Red",
+        "hex": "#B31B1B",
+        "finish": "Perlescent",
+        "image": "/cars/colors/mclaren-750s-spider-red.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/mclaren-750s-spider.jpg",
+      "/cars/colors/mclaren-750s-spider-white.jpg",
+      "/cars/colors/mclaren-750s-spider-blue.jpg",
+      "/cars/colors/mclaren-750s-spider-red.jpg",
+      "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "bugatti-chiron-pur-sport",
+    "name": "Bugatti Chiron Pur Sport",
+    "brand": "Bugatti",
+    "model": "Chiron Pur Sport 1-of-60",
+    "year": 2025,
+    "category": "Hypercars",
+    "price": 284000000,
+    "priceFormatted": "₹28.40 Cr",
+    "horsepower": 1479,
+    "topSpeed": "350 km/h",
+    "topSpeedNum": 350,
+    "acceleration": "2.3s",
+    "accelerationNum": 2.3,
+    "engine": "8.0L Quad-Turbo W16 (64 Valves)",
+    "transmission": "7-Speed Dual-Clutch with 15% closer ratios",
+    "drivetrain": "Permanent All-Wheel Drive",
+    "fuelType": "Gasoline",
+    "bodyType": "Coupe",
+    "curbWeight": "1,945 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Thunderous 16-cylinder mechanical symphony with quad 3D-printed titanium tips",
+    "defaultImage": "/cars/bugatti-chiron-pur-sport.jpg",
+    "heroImage": "/cars/bugatti-chiron-pur-sport.jpg",
+    "defaultColour": {
+      "name": "French Racing Blue",
+      "hex": "#0047AB",
+      "finish": "Gloss",
+      "image": "/cars/colors/bugatti-chiron-pur-sport-blue.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "French Racing Blue",
+        "hex": "#0047AB",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-blue.jpg"
+      },
+      {
+        "name": "Atlantic Dark Blue",
+        "hex": "#0A192F",
+        "finish": "Metallic",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-darkblue.jpg"
+      },
+      {
+        "name": "Nocturne Carbon Black",
+        "hex": "#111111",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-black.jpg"
+      },
+      {
+        "name": "Italian Red",
+        "hex": "#C41E3A",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-red.jpg"
+      }
+    ],
+    "colourImages": {
+      "French Racing Blue": "/cars/colors/bugatti-chiron-pur-sport-blue.jpg",
+      "Atlantic Dark Blue": "/cars/colors/bugatti-chiron-pur-sport-darkblue.jpg",
+      "Nocturne Carbon Black": "/cars/colors/bugatti-chiron-pur-sport-black.jpg",
+      "Italian Red": "/cars/colors/bugatti-chiron-pur-sport-red.jpg"
+    },
+    "galleryImages": [
+      "/cars/bugatti-chiron-pur-sport.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-darkblue.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-black.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-red.jpg",
+      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Strictly limited to 60 numbered examples handcrafted in Molsheim, France",
+      "1.90m massive fixed carbon rear wing generating immense cornering downforce",
+      "Magnesium aerodynamic wheels shedding 16 kg of unsprung mass",
+      "6,900 RPM redline with close-ratio gearbox tuned for apex agility",
+      "Comprehensive Indian Customs VIP clearance and ARAI Homologation protocol",
+      "Climate-controlled armored enclosed transporter included anywhere in India"
+    ],
+    "description": "The absolute crown jewel of modern hyper-engineering. 1,500 metric horsepower from an 8.0-litre quad-turbo W16 catapults this 1-of-60 Pur Sport into automotive immortality.",
+    "rating": 5,
+    "reviewsCount": 19,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "1-of-60 Hypercar",
+    "stockStatus": "Available in Mumbai Vault (BKC)",
+    "mileage": "30 km",
+    "vin": "VF9CC6187M0000042",
+    "colors": [
+      {
+        "name": "French Racing Blue",
+        "hex": "#0047AB",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-blue.jpg"
+      },
+      {
+        "name": "Atlantic Dark Blue",
+        "hex": "#0A192F",
+        "finish": "Metallic",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-darkblue.jpg"
+      },
+      {
+        "name": "Nocturne Carbon Black",
+        "hex": "#111111",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-black.jpg"
+      },
+      {
+        "name": "Italian Red",
+        "hex": "#C41E3A",
+        "finish": "Gloss",
+        "image": "/cars/colors/bugatti-chiron-pur-sport-red.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/bugatti-chiron-pur-sport.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-darkblue.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-black.jpg",
+      "/cars/colors/bugatti-chiron-pur-sport-red.jpg",
+      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "koenigsegg-jesko",
+    "name": "Koenigsegg Jesko Attack",
+    "brand": "Koenigsegg",
+    "model": "Jesko Attack Aerodynamic",
+    "year": 2025,
+    "category": "Hypercars",
+    "price": 380000000,
+    "priceFormatted": "₹38.00 Cr",
+    "horsepower": 1600,
+    "topSpeed": "480 km/h",
+    "topSpeedNum": 480,
+    "acceleration": "2.5s",
+    "accelerationNum": 2.5,
+    "engine": "5.0L Twin-Turbo Flat-Plane V8 (180° Crank)",
+    "transmission": "9-Speed Light Speed Transmission (LST)",
+    "drivetrain": "Rear-Wheel Drive with Electronic Differential",
+    "fuelType": "Gasoline / E85",
+    "bodyType": "Coupe",
+    "curbWeight": "1,420 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Violent world-record 8,500 RPM flat-plane scream with 20-bar air injection",
+    "defaultImage": "/cars/koenigsegg-jesko.jpg",
+    "heroImage": "/cars/koenigsegg-jesko.jpg",
+    "defaultColour": {
+      "name": "Crystal White",
+      "hex": "#FAFAFA",
+      "finish": "Perlescent",
+      "image": "/cars/colors/koenigsegg-jesko-white.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Crystal White",
+        "hex": "#FAFAFA",
+        "finish": "Perlescent",
+        "image": "/cars/colors/koenigsegg-jesko-white.jpg"
+      },
+      {
+        "name": "Tang Orange",
+        "hex": "#FF6F00",
+        "finish": "Metallic",
+        "image": "/cars/colors/koenigsegg-jesko-orange.jpg"
+      },
+      {
+        "name": "Imperial Blue",
+        "hex": "#0D47A1",
+        "finish": "Metallic",
+        "image": "/cars/colors/koenigsegg-jesko-blue.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#151515",
+        "finish": "Gloss",
+        "image": "/cars/colors/koenigsegg-jesko-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Crystal White": "/cars/colors/koenigsegg-jesko-white.jpg",
+      "Tang Orange": "/cars/colors/koenigsegg-jesko-orange.jpg",
+      "Imperial Blue": "/cars/colors/koenigsegg-jesko-blue.jpg",
+      "Onyx Black": "/cars/colors/koenigsegg-jesko-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/koenigsegg-jesko.jpg",
+      "/cars/colors/koenigsegg-jesko-orange.jpg",
+      "/cars/colors/koenigsegg-jesko-blue.jpg",
+      "/cars/colors/koenigsegg-jesko-black.jpg",
+      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "1,600 bhp on E85 and 1,280 bhp on high-octane premium gasoline",
+      "Patented 9-speed Light Speed Transmission (LST) allowing instant gear jumps",
+      "Active boomerang rear wing generating 1,400 kg of downforce",
+      "Autoskin dihedral synchro-helix door system operating via remote telemetry",
+      "Pre-preg carbon fiber monocoque with F1 honeycomb structure",
+      "White-Glove Enclosed Delivery Across India with Factory Support Engineer"
+    ],
+    "description": "Named after Christian von Koenigsegg's father, the Jesko is the ultimate megacar. Featuring the revolutionary 9-speed Light Speed Transmission and 1,600 horsepower, it is a triumph of Swedish aeronautical insanity.",
+    "rating": 5,
+    "reviewsCount": 22,
+    "isFeatured": true,
+    "isNewArrival": true,
+    "badge": "1,600 HP Megacar",
+    "stockStatus": "Available on Private Allocation (All India)",
+    "mileage": "15 km",
+    "vin": "YS3JK2A19PS000109",
+    "colors": [
+      {
+        "name": "Crystal White",
+        "hex": "#FAFAFA",
+        "finish": "Perlescent",
+        "image": "/cars/colors/koenigsegg-jesko-white.jpg"
+      },
+      {
+        "name": "Tang Orange",
+        "hex": "#FF6F00",
+        "finish": "Metallic",
+        "image": "/cars/colors/koenigsegg-jesko-orange.jpg"
+      },
+      {
+        "name": "Imperial Blue",
+        "hex": "#0D47A1",
+        "finish": "Metallic",
+        "image": "/cars/colors/koenigsegg-jesko-blue.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#151515",
+        "finish": "Gloss",
+        "image": "/cars/colors/koenigsegg-jesko-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/koenigsegg-jesko.jpg",
+      "/cars/colors/koenigsegg-jesko-orange.jpg",
+      "/cars/colors/koenigsegg-jesko-blue.jpg",
+      "/cars/colors/koenigsegg-jesko-black.jpg",
+      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "bmw-m4-competition",
+    "name": "BMW M4 Competition",
+    "brand": "BMW",
+    "model": "M4 Competition M xDrive",
+    "year": 2025,
+    "category": "Sports Cars",
+    "price": 15300000,
+    "priceFormatted": "₹1.53 Cr",
+    "horsepower": 503,
+    "topSpeed": "290 km/h",
+    "topSpeedNum": 290,
+    "acceleration": "3.5s",
+    "accelerationNum": 3.5,
+    "engine": "3.0L BMW M TwinPower Turbo Inline-6 (S58)",
+    "transmission": "8-Speed M Steptronic with Drivelogic",
+    "drivetrain": "M xDrive (AWD with selectable 2WD Drift Mode)",
+    "fuelType": "Gasoline",
+    "bodyType": "Coupe",
+    "curbWeight": "1,775 kg",
+    "doors": 2,
+    "seats": 4,
+    "exhaustProfile": "Aggressive quad-tailpipe M exhaust note with active butterfly flaps",
+    "defaultImage": "/cars/bmw-m4-competition.jpg",
+    "heroImage": "/cars/bmw-m4-competition.jpg",
+    "defaultColour": {
+      "name": "Isle of Man Green",
+      "hex": "#005A36",
+      "finish": "Metallic",
+      "image": "/cars/colors/bmw-m4-competition-green.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Isle of Man Green",
+        "hex": "#005A36",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-green.jpg"
+      },
+      {
+        "name": "Sao Paulo Yellow",
+        "hex": "#E7D11A",
+        "finish": "Gloss",
+        "image": "/cars/colors/bmw-m4-competition-yellow.jpg"
+      },
+      {
+        "name": "Toronto Red",
+        "hex": "#B81414",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-red.jpg"
+      },
+      {
+        "name": "Portimao Blue",
+        "hex": "#1F4788",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-blue.jpg"
+      },
+      {
+        "name": "Brooklyn Grey",
+        "hex": "#7A8084",
+        "finish": "Gloss",
+        "image": "/cars/colors/bmw-m4-competition-grey.jpg"
+      },
+      {
+        "name": "Black Sapphire",
+        "hex": "#0D0E10",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Isle of Man Green": "/cars/colors/bmw-m4-competition-green.jpg",
+      "Sao Paulo Yellow": "/cars/colors/bmw-m4-competition-yellow.jpg",
+      "Toronto Red": "/cars/colors/bmw-m4-competition-red.jpg",
+      "Portimao Blue": "/cars/colors/bmw-m4-competition-blue.jpg",
+      "Brooklyn Grey": "/cars/colors/bmw-m4-competition-grey.jpg",
+      "Black Sapphire": "/cars/colors/bmw-m4-competition-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/bmw-m4-competition.jpg",
+      "/cars/colors/bmw-m4-competition-yellow.jpg",
+      "/cars/colors/bmw-m4-competition-red.jpg",
+      "/cars/colors/bmw-m4-competition-blue.jpg",
+      "/cars/colors/bmw-m4-competition-grey.jpg",
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "M TwinPower high-revving S58 engine delivering 650 Nm of torque",
+      "M Carbon bucket racing seats shedding 9.6 kg with motorsport harness slots",
+      "M xDrive with rear-wheel bias and pure rear-wheel drive drift setting",
+      "M Carbon Ceramic Brakes with gold-painted calipers",
+      "Right-Hand Drive (RHD) Indian specification with full BMW India warranty",
+      "Curved Display running BMW Operating System 8.5 with M Drift Analyser"
+    ],
+    "description": "The benchmark high-performance sports coupe. Blending everyday usability with precision racetrack agility, the M4 Competition conquers both urban thoroughfares and winding hill climbs with effortless authority.",
+    "rating": 4.91,
+    "reviewsCount": 39,
+    "isFeatured": false,
+    "isNewArrival": true,
+    "badge": "M Power Icon",
+    "stockStatus": "Available in Delhi Atelier (Aerocity)",
+    "mileage": "75 km",
+    "vin": "WBA43AZ08PCA19042",
+    "colors": [
+      {
+        "name": "Isle of Man Green",
+        "hex": "#005A36",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-green.jpg"
+      },
+      {
+        "name": "Sao Paulo Yellow",
+        "hex": "#E7D11A",
+        "finish": "Gloss",
+        "image": "/cars/colors/bmw-m4-competition-yellow.jpg"
+      },
+      {
+        "name": "Toronto Red",
+        "hex": "#B81414",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-red.jpg"
+      },
+      {
+        "name": "Portimao Blue",
+        "hex": "#1F4788",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-blue.jpg"
+      },
+      {
+        "name": "Brooklyn Grey",
+        "hex": "#7A8084",
+        "finish": "Gloss",
+        "image": "/cars/colors/bmw-m4-competition-grey.jpg"
+      },
+      {
+        "name": "Black Sapphire",
+        "hex": "#0D0E10",
+        "finish": "Metallic",
+        "image": "/cars/colors/bmw-m4-competition-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/bmw-m4-competition.jpg",
+      "/cars/colors/bmw-m4-competition-yellow.jpg",
+      "/cars/colors/bmw-m4-competition-red.jpg",
+      "/cars/colors/bmw-m4-competition-blue.jpg",
+      "/cars/colors/bmw-m4-competition-grey.jpg",
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "mercedes-amg-gt-black-series",
+    "name": "Mercedes-AMG GT Black Series",
+    "brand": "Mercedes-AMG",
+    "model": "AMG GT Black Series (C190)",
+    "year": 2025,
+    "category": "Supercars",
+    "price": 55000000,
+    "priceFormatted": "₹5.50 Cr",
+    "horsepower": 720,
+    "topSpeed": "325 km/h",
+    "topSpeedNum": 325,
+    "acceleration": "3.2s",
+    "accelerationNum": 3.2,
+    "engine": "4.0L Biturbo V8 with Flat-Plane Crankshaft (M178 LS2)",
+    "transmission": "7-Speed AMG SPEEDSHIFT DCT Dual-Clutch",
+    "drivetrain": "Rear-Wheel Drive (RWD)",
+    "fuelType": "Gasoline",
+    "bodyType": "Coupe",
+    "curbWeight": "1,540 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "Gut-punching, unhinged flat-plane AMG roar with titanium twin pipes",
+    "defaultImage": "/cars/mercedes-amg-gt-black-series.jpg",
+    "heroImage": "/cars/mercedes-amg-gt-black-series.jpg",
+    "defaultColour": {
+      "name": "Magmabeam Orange",
+      "hex": "#FF5400",
+      "finish": "Metallic",
+      "image": "/cars/colors/mercedes-amg-gt-black-series-orange.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Magmabeam Orange",
+        "hex": "#FF5400",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-orange.jpg"
+      },
+      {
+        "name": "AMG Green Hell Magno",
+        "hex": "#228B22",
+        "finish": "Matte",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-green.jpg"
+      },
+      {
+        "name": "Designo Diamond White",
+        "hex": "#F0F0F0",
+        "finish": "Perlescent",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-white.jpg"
+      },
+      {
+        "name": "Brilliant Blue",
+        "hex": "#0F52BA",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-blue.jpg"
+      },
+      {
+        "name": "Obsidian Black",
+        "hex": "#141416",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Magmabeam Orange": "/cars/colors/mercedes-amg-gt-black-series-orange.jpg",
+      "AMG Green Hell Magno": "/cars/colors/mercedes-amg-gt-black-series-green.jpg",
+      "Designo Diamond White": "/cars/colors/mercedes-amg-gt-black-series-white.jpg",
+      "Brilliant Blue": "/cars/colors/mercedes-amg-gt-black-series-blue.jpg",
+      "Obsidian Black": "/cars/colors/mercedes-amg-gt-black-series-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/mercedes-amg-gt-black-series.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-green.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-white.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-blue.jpg",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Former Nürburgring Nordschleife production car lap record holder",
+      "Flat-plane crank 4.0L biturbo engine spinning eagerly to 7,200 RPM",
+      "Two-stage active carbon rear aerofoil with electronically adjusted flap",
+      "Carbon-fiber coilovers with manual adjustable damping and front lift",
+      "9-stage AMG TRACTION CONTROL rotary knob directly from GT3 race car",
+      "Right-Hand Drive (RHD) Indian specification with full ARAI certification"
+    ],
+    "description": "The pinnacle of Affalterbach motorsport. Armed with an aggressive flat-plane V8 and extreme GT3-derived aerodynamics, the Black Series generates over 400 kg of downforce at 250 km/h.",
+    "rating": 4.96,
+    "reviewsCount": 34,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "Ring Conqueror",
+    "stockStatus": "Available in Mumbai Atelier (BKC)",
+    "mileage": "95 km",
+    "vin": "WDD1903791A049102",
+    "colors": [
+      {
+        "name": "Magmabeam Orange",
+        "hex": "#FF5400",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-orange.jpg"
+      },
+      {
+        "name": "AMG Green Hell Magno",
+        "hex": "#228B22",
+        "finish": "Matte",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-green.jpg"
+      },
+      {
+        "name": "Designo Diamond White",
+        "hex": "#F0F0F0",
+        "finish": "Perlescent",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-white.jpg"
+      },
+      {
+        "name": "Brilliant Blue",
+        "hex": "#0F52BA",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-blue.jpg"
+      },
+      {
+        "name": "Obsidian Black",
+        "hex": "#141416",
+        "finish": "Metallic",
+        "image": "/cars/colors/mercedes-amg-gt-black-series-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/mercedes-amg-gt-black-series.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-green.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-white.jpg",
+      "/cars/colors/mercedes-amg-gt-black-series-blue.jpg",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "lamborghini-urus-performante",
+    "name": "Lamborghini Urus Performante",
+    "brand": "Lamborghini",
+    "model": "Urus Performante Super SUV",
+    "year": 2025,
+    "category": "Luxury SUVs",
+    "price": 42200000,
+    "priceFormatted": "₹4.22 Cr",
+    "horsepower": 657,
+    "topSpeed": "306 km/h",
+    "topSpeedNum": 306,
+    "acceleration": "3.3s",
+    "accelerationNum": 3.3,
+    "engine": "4.0L Twin-Turbo V8",
+    "transmission": "8-Speed Automatic with Torque Converter",
+    "drivetrain": "All-Wheel Drive with Torsen Central Diff",
+    "fuelType": "Gasoline",
+    "bodyType": "Super SUV",
+    "curbWeight": "2,150 kg",
+    "doors": 4,
+    "seats": 5,
+    "exhaustProfile": "Deep, thunderous Akrapovič titanium exhaust with backfire crackles",
+    "defaultImage": "/cars/lamborghini-urus-performante.jpg",
+    "heroImage": "/cars/lamborghini-urus-performante.jpg",
+    "defaultColour": {
+      "name": "Giallo Inti",
+      "hex": "#FFD700",
+      "finish": "Metallic",
+      "image": "/cars/colors/lamborghini-urus-performante-yellow.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Giallo Inti",
+        "hex": "#FFD700",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-urus-performante-yellow.jpg"
+      },
+      {
+        "name": "Verde Viper",
+        "hex": "#39FF14",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-urus-performante-green.jpg"
+      },
+      {
+        "name": "Arancio Borealis",
+        "hex": "#FF4500",
+        "finish": "Gloss",
+        "image": "/cars/colors/lamborghini-urus-performante-orange.jpg"
+      },
+      {
+        "name": "Nero Noctis",
+        "hex": "#111113",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-urus-performante-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Giallo Inti": "/cars/colors/lamborghini-urus-performante-yellow.jpg",
+      "Verde Viper": "/cars/colors/lamborghini-urus-performante-green.jpg",
+      "Arancio Borealis": "/cars/colors/lamborghini-urus-performante-orange.jpg",
+      "Nero Noctis": "/cars/colors/lamborghini-urus-performante-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/lamborghini-urus-performante.jpg",
+      "/cars/colors/lamborghini-urus-performante-green.jpg",
+      "/cars/colors/lamborghini-urus-performante-orange.jpg",
+      "/cars/colors/lamborghini-urus-performante-black.jpg"
+    ],
+    "features": [
+      "Pikes Peak International Hill Climb record holder for production SUVs",
+      "Carbon-fiber bonnet with active air vents and optional exposed carbon roof",
+      "Lightweight Akrapovič titanium sports exhaust standard",
+      "Steel-spring suspension lowered by 20mm with active anti-roll bars",
+      "Dedicated RALLY driving mode for loose surface and gravel drift control",
+      "All-India white-glove transport with 150-point provenance certificate"
+    ],
+    "description": "The benchmark for high-performance luxury SUVs. Combining supercar agility with the high ground clearance and commanding posture demanded by Indian roads, the Urus Performante reigns supreme.",
+    "rating": 4.93,
+    "reviewsCount": 46,
+    "isFeatured": false,
+    "isNewArrival": false,
+    "badge": "Pikes Peak King",
+    "stockStatus": "Available in Hyderabad Atelier (Jubilee Hills)",
+    "mileage": "180 km",
+    "vin": "ZPBUA1ZL8PLA09912",
+    "colors": [
+      {
+        "name": "Giallo Inti",
+        "hex": "#FFD700",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-urus-performante-yellow.jpg"
+      },
+      {
+        "name": "Verde Viper",
+        "hex": "#39FF14",
+        "finish": "Perlescent",
+        "image": "/cars/colors/lamborghini-urus-performante-green.jpg"
+      },
+      {
+        "name": "Arancio Borealis",
+        "hex": "#FF4500",
+        "finish": "Gloss",
+        "image": "/cars/colors/lamborghini-urus-performante-orange.jpg"
+      },
+      {
+        "name": "Nero Noctis",
+        "hex": "#111113",
+        "finish": "Metallic",
+        "image": "/cars/colors/lamborghini-urus-performante-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/lamborghini-urus-performante.jpg",
+      "/cars/colors/lamborghini-urus-performante-green.jpg",
+      "/cars/colors/lamborghini-urus-performante-orange.jpg",
+      "/cars/colors/lamborghini-urus-performante-black.jpg"
+    ]
+  },
+  {
+    "id": "rolls-royce-cullinan",
+    "name": "Rolls-Royce Cullinan",
+    "brand": "Rolls-Royce",
+    "model": "Cullinan Black Badge Series II",
+    "year": 2025,
+    "category": "Luxury SUVs",
+    "price": 69500000,
+    "priceFormatted": "₹6.95 Cr",
+    "horsepower": 592,
+    "topSpeed": "250 km/h",
+    "topSpeedNum": 250,
+    "acceleration": "4.5s",
+    "accelerationNum": 4.5,
+    "engine": "6.75L Twin-Turbo V12",
+    "transmission": "8-Speed Satellite-Aided Automatic",
+    "drivetrain": "All-Wheel Drive (AWD)",
+    "fuelType": "Gasoline",
+    "bodyType": "Ultra-Luxury SUV",
+    "curbWeight": "2,660 kg",
+    "doors": 4,
+    "seats": 4,
+    "exhaustProfile": "Whisper-quiet low-frequency turbine hum with commanding bass presence",
+    "defaultImage": "/cars/rolls-royce-spectre.jpg",
+    "heroImage": "/cars/rolls-royce-spectre.jpg",
+    "defaultColour": {
+      "name": "Diamond Black",
+      "hex": "#0B0B0C",
+      "finish": "Metallic",
+      "image": "/cars/colors/rolls-royce-cullinan-black.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Diamond Black",
+        "hex": "#0B0B0C",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-black.jpg"
+      },
+      {
+        "name": "Arctic White",
+        "hex": "#FFFFFF",
+        "finish": "Gloss",
+        "image": "/cars/colors/rolls-royce-cullinan-white.jpg"
+      },
+      {
+        "name": "Midnight Sapphire",
+        "hex": "#10223D",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-blue.jpg"
+      },
+      {
+        "name": "English Red",
+        "hex": "#58111A",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-red.jpg"
+      }
+    ],
+    "colourImages": {
+      "Diamond Black": "/cars/colors/rolls-royce-cullinan-black.jpg",
+      "Arctic White": "/cars/colors/rolls-royce-cullinan-white.jpg",
+      "Midnight Sapphire": "/cars/colors/rolls-royce-cullinan-blue.jpg",
+      "English Red": "/cars/colors/rolls-royce-cullinan-red.jpg"
+    },
+    "galleryImages": [
+      "/cars/rolls-royce-spectre.jpg",
+      "/cars/colors/rolls-royce-cullinan-white.jpg",
+      "/cars/colors/rolls-royce-cullinan-blue.jpg",
+      "/cars/colors/rolls-royce-cullinan-red.jpg",
+      "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Magic Carpet Ride air suspension engineered for peerless road absorption",
+      "Shooting Star Starlight Headliner with over 1,344 fiber-optic constellations",
+      "Rear Theatre Configuration with dual 12-inch high-definition monitors",
+      "Bespoke champagne cooler and handcrafted crystal flutes in center console",
+      "Right-Hand Drive (RHD) Indian Diplomatic / VIP specification",
+      "Acoustic insulation comprising over 100 kg of sound-deadening materials"
+    ],
+    "description": "The pinnacle of luxury motoring on any continent. The Cullinan floats effortlessly above road imperfections, isolating occupants in a soundproof sanctuary of handcrafted leather, book-matched veneers, and effortless V12 power.",
+    "rating": 4.99,
+    "reviewsCount": 27,
+    "isFeatured": true,
+    "isNewArrival": false,
+    "badge": "Pinnacle of Luxury",
+    "stockStatus": "Available in New Delhi Atelier (Aerocity)",
+    "mileage": "90 km",
+    "vin": "SCA684S58PUX18209",
+    "colors": [
+      {
+        "name": "Diamond Black",
+        "hex": "#0B0B0C",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-black.jpg"
+      },
+      {
+        "name": "Arctic White",
+        "hex": "#FFFFFF",
+        "finish": "Gloss",
+        "image": "/cars/colors/rolls-royce-cullinan-white.jpg"
+      },
+      {
+        "name": "Midnight Sapphire",
+        "hex": "#10223D",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-blue.jpg"
+      },
+      {
+        "name": "English Red",
+        "hex": "#58111A",
+        "finish": "Metallic",
+        "image": "/cars/colors/rolls-royce-cullinan-red.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/rolls-royce-spectre.jpg",
+      "/cars/colors/rolls-royce-cullinan-white.jpg",
+      "/cars/colors/rolls-royce-cullinan-blue.jpg",
+      "/cars/colors/rolls-royce-cullinan-red.jpg",
+      "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "aston-martin-dbx707",
+    "name": "Aston Martin DBX707",
+    "brand": "Aston Martin",
+    "model": "DBX707 Luxury Super SUV",
+    "year": 2025,
+    "category": "Luxury SUVs",
+    "price": 46300000,
+    "priceFormatted": "₹4.63 Cr",
+    "horsepower": 697,
+    "topSpeed": "310 km/h",
+    "topSpeedNum": 310,
+    "acceleration": "3.3s",
+    "accelerationNum": 3.3,
+    "engine": "4.0L Twin-Turbocharged V8",
+    "transmission": "9-Speed Wet-Clutch Automatic",
+    "drivetrain": "All-Wheel Drive with Electronic Rear LSD",
+    "fuelType": "Gasoline",
+    "bodyType": "Super SUV",
+    "curbWeight": "2,245 kg",
+    "doors": 4,
+    "seats": 5,
+    "exhaustProfile": "Active quad-pipe exhaust with dramatic sports start and ferocious overrun pops",
+    "defaultImage": "/cars/aston-martin-dbs-770-ultimate.jpg",
+    "heroImage": "/cars/aston-martin-dbs-770-ultimate.jpg",
+    "defaultColour": {
+      "name": "Aston Martin Racing Green",
+      "hex": "#004225",
+      "finish": "Gloss",
+      "image": "/cars/colors/aston-martin-dbx707-green.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Aston Martin Racing Green",
+        "hex": "#004225",
+        "finish": "Gloss",
+        "image": "/cars/colors/aston-martin-dbx707-green.jpg"
+      },
+      {
+        "name": "Apex Grey",
+        "hex": "#4B5358",
+        "finish": "Metallic",
+        "image": "/cars/colors/aston-martin-dbx707-grey.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#111215",
+        "finish": "Metallic",
+        "image": "/cars/colors/aston-martin-dbx707-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Apex Grey": "/cars/colors/aston-martin-dbx707-grey.jpg",
+      "Aston Martin Racing Green": "/cars/colors/aston-martin-dbx707-green.jpg",
+      "Onyx Black": "/cars/colors/aston-martin-dbx707-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/aston-martin-dbs-770-ultimate.jpg",
+      "/cars/colors/aston-martin-dbx707-green.jpg",
+      "/cars/colors/aston-martin-dbx707-black.jpg"
+    ],
+    "features": [
+      "Massive 420mm front carbon ceramic brakes shedding 40.5 kg",
+      "Electronic active roll control (eARC) keeping body cornering completely flat",
+      "Enlarged front satin-chrome grille maximizing airflow to cooling package",
+      "Carbon-fiber rear diffuser and roof wing spoiler producing true downforce",
+      "Right-Hand Drive (RHD) Indian specification with electronic ground clearance lift",
+      "Q by Aston Martin customized Bridge of Weir semi-aniline hides"
+    ],
+    "description": "The fastest and most powerful luxury SUV in the world. Engineered in Gaydon to blend sports car dynamics with aristocratic British grand touring opulence.",
+    "rating": 4.92,
+    "reviewsCount": 31,
+    "isFeatured": false,
+    "isNewArrival": false,
+    "badge": "707 PS V8 Beast",
+    "stockStatus": "Available in Mumbai Atelier (BKC)",
+    "mileage": "140 km",
+    "vin": "SCFRMAEB4PGB00912",
+    "colors": [
+      {
+        "name": "Aston Martin Racing Green",
+        "hex": "#004225",
+        "finish": "Gloss",
+        "image": "/cars/colors/aston-martin-dbx707-green.jpg"
+      },
+      {
+        "name": "Apex Grey",
+        "hex": "#4B5358",
+        "finish": "Metallic",
+        "image": "/cars/colors/aston-martin-dbx707-grey.jpg"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#111215",
+        "finish": "Metallic",
+        "image": "/cars/colors/aston-martin-dbx707-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/aston-martin-dbs-770-ultimate.jpg",
+      "/cars/colors/aston-martin-dbx707-green.jpg",
+      "/cars/colors/aston-martin-dbx707-black.jpg"
+    ]
+  },
+  {
+    "id": "ferrari-296-gtb",
+    "name": "Ferrari 296 GTB",
+    "brand": "Ferrari",
+    "model": "296 GTB Assetto Fiorano",
+    "year": 2025,
+    "category": "Supercars",
+    "price": 54000000,
+    "priceFormatted": "₹5.40 Cr",
+    "horsepower": 819,
+    "topSpeed": "330 km/h",
+    "topSpeedNum": 330,
+    "acceleration": "2.9s",
+    "accelerationNum": 2.9,
+    "engine": "3.0L Twin-Turbo 120° V6 + Electric Motor",
+    "transmission": "8-Speed Dual-Clutch F1",
+    "drivetrain": "Rear-Wheel Drive (RWD)",
+    "fuelType": "Plug-in Hybrid (PHEV)",
+    "bodyType": "Coupe",
+    "curbWeight": "1,470 kg",
+    "doors": 2,
+    "seats": 2,
+    "exhaustProfile": "The 'Piccolo V12' — high-pitch musical resonance vibrating to 8,500 RPM",
+    "defaultImage": "/cars/ferrari-purosangue.jpg",
+    "heroImage": "/cars/ferrari-purosangue.jpg",
+    "defaultColour": {
+      "name": "Rosso Corsa",
+      "hex": "#CC0000",
+      "finish": "Gloss",
+      "image": "/cars/colors/ferrari-296-gtb-red.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Rosso Corsa",
+        "hex": "#CC0000",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-296-gtb-red.jpg"
+      },
+      {
+        "name": "Blu Pozzi",
+        "hex": "#102A43",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-296-gtb-blue.jpg"
+      },
+      {
+        "name": "Grigio Silverstone",
+        "hex": "#484F56",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-296-gtb-grey.jpg"
+      }
+    ],
+    "colourImages": {
+      "Rosso Corsa": "/cars/colors/ferrari-296-gtb-red.jpg",
+      "Blu Pozzi": "/cars/colors/ferrari-296-gtb-blue.jpg",
+      "Grigio Silverstone": "/cars/colors/ferrari-296-gtb-grey.jpg"
+    },
+    "galleryImages": [
+      "/cars/ferrari-purosangue.jpg",
+      "/cars/colors/ferrari-296-gtb-blue.jpg",
+      "/cars/colors/ferrari-296-gtb-grey.jpg"
+    ],
+    "features": [
+      "Revolutionary 120° wide-angle 'Hot-V' twin-turbo configuration",
+      "Combined 830 cv output delivering unprecedented specific output of 221 cv/L",
+      "TMA (Transition Manager Actuator) for seamless hybrid to pure electric transitions",
+      "Active LaFerrari-derived rear spoiler producing up to 360 kg downforce",
+      "Assetto Fiorano package with Multimatic race dampers and Lexan rear screen",
+      "Right-Hand Drive (RHD) allocation with Indian Customs clearance"
+    ],
+    "description": "Affectionately dubbed the 'little V12' by Ferrari engineers for its spine-tingling acoustic purity. The 296 GTB redefines mid-rear-engined sports car agility with electrifying hybrid response.",
+    "rating": 4.94,
+    "reviewsCount": 35,
+    "isFeatured": false,
+    "isNewArrival": false,
+    "badge": "Piccolo V12",
+    "stockStatus": "Available in Bengaluru Atelier (UB City)",
+    "mileage": "115 km",
+    "vin": "ZFF98NFA9P0298102",
+    "colors": [
+      {
+        "name": "Rosso Corsa",
+        "hex": "#CC0000",
+        "finish": "Gloss",
+        "image": "/cars/colors/ferrari-296-gtb-red.jpg"
+      },
+      {
+        "name": "Blu Pozzi",
+        "hex": "#102A43",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-296-gtb-blue.jpg"
+      },
+      {
+        "name": "Grigio Silverstone",
+        "hex": "#484F56",
+        "finish": "Metallic",
+        "image": "/cars/colors/ferrari-296-gtb-grey.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/ferrari-purosangue.jpg",
+      "/cars/colors/ferrari-296-gtb-blue.jpg",
+      "/cars/colors/ferrari-296-gtb-grey.jpg"
+    ]
+  },
+  {
+    "id": "bentley-continental-gt-speed",
+    "name": "Bentley Continental GT Speed",
+    "brand": "Bentley",
+    "model": "Continental GT Speed Mulliner",
+    "year": 2025,
+    "category": "Grand Tourers",
+    "price": 42000000,
+    "priceFormatted": "₹4.20 Cr",
+    "horsepower": 650,
+    "topSpeed": "335 km/h",
+    "topSpeedNum": 335,
+    "acceleration": "3.6s",
+    "accelerationNum": 3.6,
+    "engine": "6.0L Twin-Turbocharged W12 TSI",
+    "transmission": "8-Speed Dual-Clutch with Active AWD",
+    "drivetrain": "All-Wheel Drive (Electronic Rear Limited Slip Diff)",
+    "fuelType": "Gasoline",
+    "bodyType": "Grand Tourer",
+    "curbWeight": "2,273 kg",
+    "doors": 2,
+    "seats": 4,
+    "exhaustProfile": "Refined, effortless baritone growl swelling into majestic W12 roar",
+    "defaultImage": "/cars/bentley-continental-gt-mulliner.jpg",
+    "heroImage": "/cars/bentley-continental-gt-mulliner.jpg",
+    "defaultColour": {
+      "name": "Verdant Green",
+      "hex": "#1C352D",
+      "finish": "Metallic",
+      "image": "/cars/colors/bentley-continental-gt-speed-green.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Verdant Green",
+        "hex": "#1C352D",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-green.jpg"
+      },
+      {
+        "name": "Sequin Blue",
+        "hex": "#0F4C81",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-blue.jpg"
+      },
+      {
+        "name": "Beluga Black",
+        "hex": "#0F1012",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-black.jpg"
+      }
+    ],
+    "colourImages": {
+      "Verdant Green": "/cars/colors/bentley-continental-gt-speed-green.jpg",
+      "Sequin Blue": "/cars/colors/bentley-continental-gt-speed-blue.jpg",
+      "Beluga Black": "/cars/colors/bentley-continental-gt-speed-black.jpg"
+    },
+    "galleryImages": [
+      "/cars/bentley-continental-gt-mulliner.jpg",
+      "/cars/colors/bentley-continental-gt-speed-blue.jpg",
+      "/cars/colors/bentley-continental-gt-speed-black.jpg",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=85"
+    ],
+    "features": [
+      "Iconic 6.0L twin-turbo W12 engine hand-assembled in Crewe, England",
+      "Electronic All-Wheel Steering combined with 48V active anti-roll system",
+      "Mulliner 'Diamond-in-Diamond' quilted leather with 400,000 precision stitches",
+      "Rotating Dashboard with three rotating facets (Digital, Veneer, Analog dials)",
+      "Right-Hand Drive (RHD) Indian specification with 4-corner air suspension",
+      "Naim for Bentley 2,200W 18-speaker premium audio system"
+    ],
+    "description": "The definitive luxury grand tourer. Capable of crossing continents or Indian expressways at over 300 km/h in cocooned, whispering comfort with handcrafted Mulliner excellence.",
+    "rating": 4.96,
+    "reviewsCount": 30,
+    "isFeatured": false,
+    "isNewArrival": false,
+    "badge": "W12 Pinnacle GT",
+    "stockStatus": "Available in New Delhi Atelier (Aerocity)",
+    "mileage": "135 km",
+    "vin": "SCBBD33S6PC098124",
+    "colors": [
+      {
+        "name": "Verdant Green",
+        "hex": "#1C352D",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-green.jpg"
+      },
+      {
+        "name": "Sequin Blue",
+        "hex": "#0F4C81",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-blue.jpg"
+      },
+      {
+        "name": "Beluga Black",
+        "hex": "#0F1012",
+        "finish": "Metallic",
+        "image": "/cars/colors/bentley-continental-gt-speed-black.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/bentley-continental-gt-mulliner.jpg",
+      "/cars/colors/bentley-continental-gt-speed-blue.jpg",
+      "/cars/colors/bentley-continental-gt-speed-black.jpg",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=85"
+    ]
+  },
+  {
+    "id": "porsche-taycan-turbo-gt",
+    "name": "Porsche Taycan Turbo GT",
+    "brand": "Porsche",
+    "model": "Taycan Turbo GT with Weissach Package",
+    "year": 2025,
+    "category": "Electric Exotics",
+    "price": 31500000,
+    "priceFormatted": "₹3.15 Cr",
+    "horsepower": 1019,
+    "topSpeed": "305 km/h",
+    "topSpeedNum": 305,
+    "acceleration": "2.2s",
+    "accelerationNum": 2.2,
+    "engine": "Dual Permanent Magnet Synchronous Motors with SiC Inverters",
+    "transmission": "2-Speed Automatic on Rear Axle",
+    "drivetrain": "All-Wheel Drive (Porsche Traction Management)",
+    "fuelType": "100% Electric",
+    "bodyType": "Sedan / Saloon",
+    "curbWeight": "2,220 kg",
+    "doors": 4,
+    "seats": 4,
+    "exhaustProfile": "Porsche Electric Sport Sound with Formula E inspired frequency synthesis",
+    "defaultImage": "/cars/porsche-taycan-turbo-gt.jpg",
+    "heroImage": "/cars/porsche-taycan-turbo-gt.jpg",
+    "defaultColour": {
+      "name": "Purple Sky Metallic",
+      "hex": "#4C2852",
+      "finish": "Metallic",
+      "image": "/cars/colors/porsche-taycan-turbo-gt-purple.jpg"
+    },
+    "availableColours": [
+      {
+        "name": "Purple Sky Metallic",
+        "hex": "#4C2852",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-purple.jpg"
+      },
+      {
+        "name": "White Carrara",
+        "hex": "#FAFAFA",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-white.jpg"
+      },
+      {
+        "name": "Pale Blue Metallic",
+        "hex": "#7E9DAF",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-blue.jpg"
+      },
+      {
+        "name": "Volcano Grey Metallic",
+        "hex": "#3A3D40",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-grey.jpg"
+      }
+    ],
+    "colourImages": {
+      "Pale Blue Metallic": "/cars/colors/porsche-taycan-turbo-gt-blue.jpg",
+      "Purple Sky Metallic": "/cars/colors/porsche-taycan-turbo-gt-purple.jpg",
+      "Volcano Grey Metallic": "/cars/colors/porsche-taycan-turbo-gt-grey.jpg",
+      "White Carrara": "/cars/colors/porsche-taycan-turbo-gt-white.jpg"
+    },
+    "galleryImages": [
+      "/cars/porsche-taycan-turbo-gt.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-purple.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-grey.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-white.jpg"
+    ],
+    "features": [
+      "Nürburgring Nordschleife record holder for electric series production cars",
+      "Peak output of up to 1,092 hp with Launch Control and Attack Mode push-to-pass",
+      "Porsche Active Ride suspension with lightning-fast wheel load stabilization",
+      "Carbon fiber front splitter, air blades, and fixed rear wing with Gurney flap",
+      "Pulse inverter operating with 900-amp semiconductors using silicon carbide",
+      "High-speed 320 kW DC ultra-fast charging compatible with India's expressway networks"
+    ],
+    "description": "The fastest accelerating series production Porsche ever engineered. Armed with over 1,000 electric horses and Attack Mode push-to-pass, the Taycan Turbo GT obliterates 0-100 km/h in an unbelievable 2.2 seconds.",
+    "rating": 4.96,
+    "reviewsCount": 29,
+    "isFeatured": false,
+    "isNewArrival": true,
+    "badge": "Nürburgring EV King",
+    "stockStatus": "Available in Ahmedabad (SG Highway)",
+    "mileage": "60 km",
+    "vin": "WP0AA2Y14PSA88921",
+    "colors": [
+      {
+        "name": "Purple Sky Metallic",
+        "hex": "#4C2852",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-purple.jpg"
+      },
+      {
+        "name": "White Carrara",
+        "hex": "#FAFAFA",
+        "finish": "Gloss",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-white.jpg"
+      },
+      {
+        "name": "Pale Blue Metallic",
+        "hex": "#7E9DAF",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-blue.jpg"
+      },
+      {
+        "name": "Volcano Grey Metallic",
+        "hex": "#3A3D40",
+        "finish": "Metallic",
+        "image": "/cars/colors/porsche-taycan-turbo-gt-grey.jpg"
+      }
+    ],
+    "gallery": [
+      "/cars/porsche-taycan-turbo-gt.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-purple.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-grey.jpg",
+      "/cars/colors/porsche-taycan-turbo-gt-white.jpg"
+    ]
+  }
+];
+
+export const CATEGORIES = [
+  {
+    "id": "all",
+    "name": "All Fleet",
+    "icon": "Sparkles",
+    "count": 14
+  },
+  {
+    "id": "Supercars",
+    "name": "Supercars",
+    "icon": "Flame",
+    "count": 4
+  },
+  {
+    "id": "Hypercars",
+    "name": "Hypercars",
+    "icon": "Zap",
+    "count": 4
+  },
+  {
+    "id": "Sports Cars",
+    "name": "Sports Cars",
+    "icon": "Flame",
+    "count": 1
+  },
+  {
+    "id": "Luxury SUVs",
+    "name": "Luxury SUVs",
+    "icon": "Shield",
+    "count": 3
+  },
+  {
+    "id": "Grand Tourers",
+    "name": "Grand Tourers",
+    "icon": "Compass",
+    "count": 1
+  },
+  {
+    "id": "Electric Exotics",
+    "name": "Electric Exotics",
+    "icon": "BatteryCharging",
+    "count": 1
+  }
+];

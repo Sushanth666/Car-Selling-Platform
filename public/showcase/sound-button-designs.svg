@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <!-- Dark Luxury Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070a"/>
+      <stop offset="50%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+
+    <!-- Gold Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+
+    <!-- Crimson Ignited Gradient -->
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+
+    <!-- Glass Panel Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.5)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.8)"/>
+    </linearGradient>
+
+    <!-- Drop Shadows & Glow Filters -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: 0.05em; }
+    .subtitle { font-family: 'Inter', -apple-system, sans-serif; font-weight: 500; fill: #94a3b8; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase; }
+    .badge { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; fill: #eab308; }
+    .card-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 18px; fill: #ffffff; }
+    .card-desc { font-family: 'Inter', -apple-system, sans-serif; font-weight: 400; font-size: 12.5px; fill: #94a3b8; line-height: 1.5; }
+    .btn-text { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; fill: #ffffff; }
+  </style>
+
+  <!-- Deep Slate/Black Luxury Canvas Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="100" r="180" fill="#eab308" opacity="0.04" filter="blur(60px)"/>
+  <circle cx="1000" cy="300" r="220" fill="#eab308" opacity="0.04" filter="blur(80px)"/>
+
+  <!-- Header Header Text -->
+  <text x="600" y="55" text-anchor="middle" class="badge">APEX ATELIER DESIGN LAB</text>
+  <text x="600" y="95" text-anchor="middle" class="title" font-size="28">EXHAUST SOUND BUTTON • 4 BESPOKE DESIGN OPTIONS</text>
+  <text x="600" y="125" text-anchor="middle" class="subtitle">Replacing the plain dark circle with a high-end luxury interface</text>
+
+  <!-- Current Design Pill (Small Reference) -->
+  <g transform="translate(60, 50)">
+    <rect width="130" height="34" rx="17" fill="#000000" opacity="0.6" stroke="#334155" stroke-width="1"/>
+    <circle cx="20" cy="17" r="10" fill="#1e293b"/>
+    <!-- current speaker icon -->
+    <path d="M17 14 L19 14 L22 12 L22 22 L19 20 L17 20 Z" fill="#94a3b8"/>
+    <text x="36" y="21" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">CURRENT ICON</text>
+  </g>
+
+  <!-- ==================== OPTION 1: ACOUSTIC EQUALIZER PILL (RECOMMENDED) ==================== -->
+  <g transform="translate(60, 160)" filter="url(#boxShadow)">
+    <rect width="255" height="460" rx="24" fill="url(#cardBg)" stroke="url(#goldBorder)" stroke-width="1.5"/>
+    
+    <!-- Recommended Tag -->
+    <rect x="20" y="22" width="135" height="22" rx="11" fill="rgba(234, 179, 8, 0.15)" stroke="#eab308" stroke-width="1"/>
+    <text x="87" y="37" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#facc15" letter-spacing="0.1em">★ RECOMMENDED</text>
+
+    <text x="24" y="75" class="card-title">Option 1: Audio Wave Pill</text>
+    <text x="24" y="100" class="card-desc">Sleek horizontal capsule with</text>
+    <text x="24" y="118" class="card-desc">animated soundwave equalizer</text>
+    <text x="24" y="136" class="card-desc">bars and 'REV SOUND' label.</text>
+
+    <!-- Simulated Car Corner Preview (Dark carbon area) -->
+    <rect x="20" y="160" width="215" height="190" rx="16" fill="#0a0e17" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="35" y="190" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">IDLE STATE:</text>
+
+    <!-- The Idle Button -->
+    <g transform="translate(35, 205)">
+      <!-- Pill background -->
+      <rect width="145" height="36" rx="18" fill="rgba(11, 15, 23, 0.9)" stroke="rgba(234, 179, 8, 0.45)" stroke-width="1.5" filter="url(#goldGlow)"/>
+      <!-- Equalizer bars -->
+      <rect x="18" y="14" width="2.5" height="8" rx="1" fill="#eab308"/>
+      <rect x="23" y="10" width="2.5" height="16" rx="1" fill="#eab308"/>
+      <rect x="28" y="7" width="2.5" height="22" rx="1" fill="#fde047"/>
+      <rect x="33" y="12" width="2.5" height="12" rx="1" fill="#eab308"/>
+      <!-- Text -->
+      <text x="44" y="22" class="btn-text" fill="#fef08a" font-size="10.5">REV SOUND</text>
+    </g>
+
+    <text x="35" y="275" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">ACTIVE / REVVING STATE:</text>
+    <!-- The Active Revving Button -->
+    <g transform="translate(35, 290)">
+      <rect width="145" height="36" rx="18" fill="url(#crimsonGrad)" stroke="#f87171" stroke-width="1.5" filter="url(#redGlow)"/>
+      <!-- Dancing flame audio bars -->
+      <rect x="18" y="8" width="2.5" height="20" rx="1" fill="#ffffff"/>
+      <rect x="23" y="6" width="2.5" height="24" rx="1" fill="#ffffff"/>
+      <rect x="28" y="10" width="2.5" height="16" rx="1" fill="#ffffff"/>
+      <rect x="33" y="7" width="2.5" height="22" rx="1" fill="#ffffff"/>
+      <text x="44" y="22" class="btn-text" fill="#ffffff" font-size="10.5">ROARING...</text>
+    </g>
+
+    <!-- Bullet points -->
+    <circle cx="30" cy="380" r="3" fill="#eab308"/>
+    <text x="42" y="384" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Clear, readable &amp; premium</text>
+    <circle cx="30" cy="405" r="3" fill="#eab308"/>
+    <text x="42" y="409" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Animated sound equalizer</text>
+    <circle cx="30" cy="430" r="3" fill="#eab308"/>
+    <text x="42" y="434" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">High click-through engagement</text>
+  </g>
+
+  <!-- ==================== OPTION 2: ENGINE START IGNITION BUTTON ==================== -->
+  <g transform="translate(340, 160)" filter="url(#boxShadow)">
+    <rect width="255" height="460" rx="24" fill="url(#cardBg)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <rect x="20" y="22" width="135" height="22" rx="11" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="1"/>
+    <text x="87" y="37" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#f87171" letter-spacing="0.1em">MOTORSPORT STYLE</text>
+
+    <text x="24" y="75" class="card-title">Option 2: Ignition Start</text>
+    <text x="24" y="100" class="card-desc">Lamborghini/Ferrari cockpit</text>
+    <text x="24" y="118" class="card-desc">push-button styled with knurled</text>
+    <text x="24" y="136" class="card-desc">metallic bezel &amp; red pulse ring.</text>
+
+    <!-- Preview Box -->
+    <rect x="20" y="160" width="215" height="190" rx="16" fill="#0a0e17" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    
+    <text x="35" y="190" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">IDLE STATE:</text>
+    <!-- Ignition Button Idle -->
+    <g transform="translate(50, 202)">
+      <!-- Outer knurled gold ring -->
+      <circle cx="26" cy="26" r="26" fill="#1e293b" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
+      <!-- Inner Dark Button -->
+      <circle cx="26" cy="26" r="20" fill="#0f172a" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <!-- Flame / Power icon -->
+      <path d="M26 14 C28 18 32 20 32 25 C32 29 29.3 32 26 32 C22.7 32 20 29 20 25 C20 21 24 19 26 14 Z" fill="url(#goldGrad)"/>
+      <text x="64" y="22" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">ENGINE</text>
+      <text x="64" y="35" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#eab308" letter-spacing="0.1em">START REV</text>
+    </g>
+
+    <text x="35" y="275" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">ACTIVE / REVVING STATE:</text>
+    <!-- Ignition Button Active -->
+    <g transform="translate(50, 287)">
+      <circle cx="26" cy="26" r="26" fill="#450a0a" stroke="#ef4444" stroke-width="2.5" filter="url(#redGlow)"/>
+      <circle cx="26" cy="26" r="20" fill="#991b1b"/>
+      <path d="M26 14 C28 18 32 20 32 25 C32 29 29.3 32 26 32 C22.7 32 20 29 20 25 C20 21 24 19 26 14 Z" fill="#ffffff"/>
+      <text x="64" y="22" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">IGNITED</text>
+      <text x="64" y="35" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#f87171" letter-spacing="0.1em">REDLINE 9K</text>
+    </g>
+
+    <circle cx="30" cy="380" r="3" fill="#ef4444"/>
+    <text x="42" y="384" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Authentic cockpit ignition feel</text>
+    <circle cx="30" cy="405" r="3" fill="#ef4444"/>
+    <text x="42" y="409" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Motorsport heritage aesthetic</text>
+    <circle cx="30" cy="430" r="3" fill="#ef4444"/>
+    <text x="42" y="434" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Tactile round knurled ring</text>
+  </g>
+
+  <!-- ==================== OPTION 3: 24K GOLD GLASS SONAR RING ==================== -->
+  <g transform="translate(620, 160)" filter="url(#boxShadow)">
+    <rect width="255" height="460" rx="24" fill="url(#cardBg)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <rect x="20" y="22" width="135" height="22" rx="11" fill="rgba(234, 179, 8, 0.15)" stroke="#eab308" stroke-width="1"/>
+    <text x="87" y="37" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#facc15" letter-spacing="0.1em">HAUTE HORLOGERIE</text>
+
+    <text x="24" y="75" class="card-title">Option 3: Gold Sonar Ring</text>
+    <text x="24" y="100" class="card-desc">Chamfered 24K gold ring with</text>
+    <text x="24" y="118" class="card-desc">translucent smoked glass and</text>
+    <text x="24" y="136" class="card-desc">pulsing concentric sound waves.</text>
+
+    <!-- Preview Box -->
+    <rect x="20" y="160" width="215" height="190" rx="16" fill="#0a0e17" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <text x="35" y="190" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">IDLE STATE:</text>
+    <!-- Sonar Ring Idle -->
+    <g transform="translate(50, 202)">
+      <!-- Outer subtle ripple -->
+      <circle cx="26" cy="26" r="25" fill="none" stroke="#ca8a04" stroke-width="1" opacity="0.4"/>
+      <circle cx="26" cy="26" r="21" fill="rgba(15, 23, 42, 0.9)" stroke="url(#goldGrad)" stroke-width="1.8"/>
+      <!-- Speaker + Sound Wave -->
+      <path d="M20 23 L22 23 L25 20 L25 32 L22 29 L20 29 Z" fill="#fde047"/>
+      <path d="M28 22 C29.5 24 29.5 28 28 30" fill="none" stroke="#fde047" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M31 19 C33.5 22.5 33.5 29.5 31 33" fill="none" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
+      
+      <text x="64" y="24" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#ffffff">ACOUSTIC</text>
+      <text x="64" y="37" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#eab308" letter-spacing="0.05em">V12 SYMPHONY</text>
+    </g>
+
+    <text x="35" y="275" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">ACTIVE / REVVING STATE:</text>
+    <!-- Sonar Ring Active -->
+    <g transform="translate(50, 287)">
+      <circle cx="26" cy="26" r="28" fill="none" stroke="#facc15" stroke-width="1" opacity="0.6"/>
+      <circle cx="26" cy="26" r="21" fill="#713f12" stroke="#facc15" stroke-width="2" filter="url(#goldGlow)"/>
+      <path d="M20 23 L22 23 L25 20 L25 32 L22 29 L20 29 Z" fill="#ffffff"/>
+      <path d="M28 22 C29.5 24 29.5 28 28 30" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M31 19 C33.5 22.5 33.5 29.5 31 33" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+      
+      <text x="64" y="24" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#facc15">REVVING</text>
+      <text x="64" y="37" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#ffffff">TITANIUM FLAPS</text>
+    </g>
+
+    <circle cx="30" cy="380" r="3" fill="#eab308"/>
+    <text x="42" y="384" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Concentric ripple animations</text>
+    <circle cx="30" cy="405" r="3" fill="#eab308"/>
+    <text x="42" y="409" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Ultra-clean bespoke luxury</text>
+    <circle cx="30" cy="430" r="3" fill="#eab308"/>
+    <text x="42" y="434" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Matches watch bezel styling</text>
+  </g>
+
+  <!-- ==================== OPTION 4: MINIMALIST DECIBEL BADGE ==================== -->
+  <g transform="translate(895, 160)" filter="url(#boxShadow)">
+    <rect width="245" height="460" rx="24" fill="url(#cardBg)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <rect x="20" y="22" width="135" height="22" rx="11" fill="rgba(148, 163, 184, 0.15)" stroke="#94a3b8" stroke-width="1"/>
+    <text x="87" y="37" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#cbd5e1" letter-spacing="0.1em">MINIMAL TELEMETRY</text>
+
+    <text x="24" y="75" class="card-title">Option 4: Decibel Badge</text>
+    <text x="24" y="100" class="card-desc">Compact corner telemetry</text>
+    <text x="24" y="118" class="card-desc">badge displaying live dB level</text>
+    <text x="24" y="136" class="card-desc">&amp; acoustic frequency profile.</text>
+
+    <!-- Preview Box -->
+    <rect x="20" y="160" width="205" height="190" rx="16" fill="#0a0e17" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <text x="35" y="190" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">IDLE STATE:</text>
+    <!-- Badge Idle -->
+    <g transform="translate(35, 205)">
+      <rect width="130" height="34" rx="8" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <path d="M15 17 L18 17 L21 14 L21 24 L18 21 L15 21 Z" fill="#eab308"/>
+      <text x="28" y="22" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#ffffff">98 dB</text>
+      <text x="75" y="22" class="btn-text" fill="#94a3b8" font-size="9">REV</text>
+    </g>
+
+    <text x="35" y="275" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">ACTIVE / REVVING STATE:</text>
+    <!-- Badge Active -->
+    <g transform="translate(35, 290)">
+      <rect width="130" height="34" rx="8" fill="#1e293b" stroke="#eab308" stroke-width="1.5" filter="url(#goldGlow)"/>
+      <path d="M15 17 L18 17 L21 14 L21 24 L18 21 L15 21 Z" fill="#ef4444"/>
+      <text x="28" y="22" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#facc15">124 dB</text>
+      <text x="80" y="22" class="btn-text" fill="#ef4444" font-size="9">WOT</text>
+    </g>
+
+    <circle cx="30" cy="380" r="3" fill="#94a3b8"/>
+    <text x="42" y="384" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Compact &amp; unobtrusive</text>
+    <circle cx="30" cy="405" r="3" fill="#94a3b8"/>
+    <text x="42" y="409" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Telemetry &amp; sound combined</text>
+    <circle cx="30" cy="430" r="3" fill="#94a3b8"/>
+    <text x="42" y="434" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Modern technical typography</text>
+  </g>
+
+  <!-- Bottom Helper Note -->
+  <text x="600" y="655" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#64748b">
+    Select your preferred option number (1, 2, 3, or 4) to update the car card audio rev button immediately.
+  </text>
+</svg>
