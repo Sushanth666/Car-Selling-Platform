@@ -153,6 +153,23 @@ export default function App() {
     setIsSpecSheetOpen(true);
   };
 
+  // Dynamic kinetic moving marquee ticker in browser tab name (smooth scrolling animation, no eagle)
+  useEffect(() => {
+    const brandPhrase = inspectedCar 
+      ? `${inspectedCar.name.toUpperCase()} • AUREUS VELOCE • THE SOVEREIGN KINETIC • `
+      : "AUREUS VELOCE • THE SOVEREIGN KINETIC • BESPOKE LUXURY & EXOTIC HYPERCARS • ";
+    
+    let step = 0;
+    document.title = brandPhrase;
+
+    const ticker = setInterval(() => {
+      document.title = brandPhrase.slice(step) + brandPhrase.slice(0, step);
+      step = (step + 1) % brandPhrase.length;
+    }, 280);
+
+    return () => clearInterval(ticker);
+  }, [inspectedCar]);
+
   // Global keyboard shortcut for search popup (Ctrl+K or Cmd+K)
   useEffect(() => {
     const handleGlobalKeyDown = (e) => {
