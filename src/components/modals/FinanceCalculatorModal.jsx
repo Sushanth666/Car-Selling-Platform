@@ -218,7 +218,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
 
                   <div className="pt-3 flex justify-between items-center text-base sm:text-lg font-bold border-t border-gold-400/30">
                     <span className="text-gold-400 uppercase tracking-wider">Total On-Road Estimated ({stateData.id})</span>
-                    <span className="text-2xl font-display font-extrabold text-gold-400 font-mono">
+                    <span className="text-2xl font-mono font-extrabold text-gold-400">
                       {formatLakhCr(totalOnRoadPrice)}
                     </span>
                   </div>

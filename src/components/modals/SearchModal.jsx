@@ -25,8 +25,8 @@ export default function SearchModal({
   setSearchQuery,
   onInspectCar,
   onBookTestDrive,
-  onSelectCategory: _onSelectCategory,
-  onViewAllInCollection: _onViewAllInCollection
+  onSelectCategory,
+  onViewAllInCollection
 }) {
   const inputRef = useRef(null);
   const [internalQuery, setInternalQuery] = useState(searchQuery || "");
@@ -322,21 +322,21 @@ export default function SearchModal({
                       </h4>
 
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-300 mt-1">
-                        <span className="font-display font-bold text-gold-400 text-sm">
+                        <span className="font-display font-bold text-gold-400 text-sm tracking-tight">
                           {car.priceFormatted}
                         </span>
                         <span className="text-white/20">|</span>
                         <span className="flex items-center gap-1 text-[11px] text-slate-400">
-                          <Gauge className="w-3 h-3 text-crimson-400" />
-                          {car.horsepower} BHP
+                          <Gauge className="w-3 h-3 text-crimson-500" />
+                          <span className="font-mono font-medium text-slate-300">{car.horsepower}</span> BHP
                         </span>
                         <span className="flex items-center gap-1 text-[11px] text-slate-400">
                           <Zap className="w-3 h-3 text-gold-400" />
-                          0-100: {car.acceleration}
+                          0-100: <span className="font-mono font-medium text-slate-300">{car.acceleration}</span>
                         </span>
-                        <span className="flex items-center gap-1 text-[11px] text-slate-400 hidden sm:flex">
+                        <span className="hidden sm:flex items-center gap-1 text-[11px] text-slate-400">
                           <Compass className="w-3 h-3 text-electric-400" />
-                          {car.topSpeedNum} KM/H
+                          <span className="font-mono font-medium text-slate-300">{car.topSpeedNum}</span> KM/H
                         </span>
                       </div>
                     </div>

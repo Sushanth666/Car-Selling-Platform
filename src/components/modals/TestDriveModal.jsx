@@ -184,7 +184,7 @@ export default function TestDriveModal({
               
               {/* Vehicle Selection */}
               <div>
-                <label htmlFor="testdrive-car-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                <label htmlFor="testdrive-car-select" className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                   <Car className="w-3.5 h-3.5 text-gold-400" />
                   Select Vehicle for Test Drive
                 </label>
@@ -205,7 +205,7 @@ export default function TestDriveModal({
 
               {/* Showroom Atelier Location */}
               <div>
-                <label htmlFor="testdrive-location-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                <label htmlFor="testdrive-location-select" className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                   <MapPin className="w-3.5 h-3.5 text-gold-400" />
                   Atelier / Delivery Location
                 </label>
@@ -231,7 +231,7 @@ export default function TestDriveModal({
               {/* Date & Time Slot Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="testdrive-date-input" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                  <label htmlFor="testdrive-date-input" className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                     <Calendar className="w-3.5 h-3.5 text-gold-400" />
                     Preferred Date
                   </label>
@@ -247,7 +247,7 @@ export default function TestDriveModal({
                 </div>
 
                 <div>
-                  <label htmlFor="testdrive-time-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                  <label htmlFor="testdrive-time-select" className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                     <Clock className="w-3.5 h-3.5 text-gold-400" />
                     Time Window
                   </label>
