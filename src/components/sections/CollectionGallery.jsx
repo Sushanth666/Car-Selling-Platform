@@ -1,10 +1,23 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, SlidersHorizontal, LayoutGrid, List, RotateCcw, 
-  Sparkles, ChevronDown, Filter, Zap, Flame, Calculator, Clock, ArrowRight
+  Sparkles, ChevronDown, Filter, Zap, Flame, Calculator, Clock, ArrowRight,
+  ChevronLeft, ChevronRight, Compass, Crown, Shield, BatteryCharging
 } from 'lucide-react';
 import CarCard from '../vehicle/CarCard';
 import { matchesCarQuery } from '../../utils/searchHelper';
+import { formatPriceByCurrency } from '../../utils/currency';
+
+const ICON_MAP = {
+  Sparkles,
+  Flame,
+  Zap,
+  Compass,
+  Crown,
+  Shield,
+  BatteryCharging
+};
 
 export default function CollectionGallery({
   allCars,
@@ -32,6 +45,59 @@ export default function CollectionGallery({
 }) {
   const [showFilterDrawer, setShowFilterDrawer] = useState(false);
   const [viewMode, setViewMode] = useState("grid"); // 'grid' | 'list'
+  
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  const updateScrollState = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      const overflows = scrollWidth > clientWidth + 4;
+      setIsOverflowing(overflows);
+      setCanScrollLeft(scrollLeft > 15);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 15);
+    }
+  };
+
+  useEffect(() => {
+    updateScrollState();
+    const handleResize = () => updateScrollState();
+    window.addEventListener('resize', handleResize);
+    const t = setTimeout(updateScrollState, 100);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(t);
+    };
+  }, []);
+
+  const handleScroll = (direction) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -260 : 260,
+        behavior: 'smooth'
+      });
+      setTimeout(updateScrollState, 350);
+    }
+  };
+
+  const categoryPills = useMemo(() => {
+    const counts = { all: allCars.length };
+    allCars.forEach(c => {
+      counts[c.category] = (counts[c.category] || 0) + 1;
+    });
+
+    return [
+      { id: "all", name: "All Fleet", icon: "Sparkles", count: counts.all || 14 },
+      { id: "Supercars", name: "Supercars", icon: "Flame", count: counts["Supercars"] || 4 },
+      { id: "Hypercars", name: "Hypercars", icon: "Zap", count: counts["Hypercars"] || 4 },
+      { id: "Sports Cars", name: "Sports Cars", icon: "Flame", count: counts["Sports Cars"] || 1 },
+      { id: "Luxury SUVs", name: "Luxury SUVs", icon: "Shield", count: counts["Luxury SUVs"] || 3 },
+      { id: "Grand Tourers", name: "Grand Tourers", icon: "Compass", count: counts["Grand Tourers"] || 1 },
+      { id: "Electric Exotics", name: "Electric Exotics", icon: "BatteryCharging", count: counts["Electric Exotics"] || 1 }
+    ];
+  }, [allCars]);
   
   // Advanced filters state
   const [maxPrice, setMaxPrice] = useState(300000000);
@@ -250,7 +316,7 @@ export default function CollectionGallery({
                       {car.name}
                     </span>
                     <span className="text-[10px] font-mono text-gold-400 block">
-                      {car.priceFormatted}
+                      {formatPriceByCurrency(car.price, currentCurrency)}
                     </span>
                   </div>
                 </div>
@@ -356,32 +422,82 @@ export default function CollectionGallery({
 
           </div>
 
-          {/* Quick Category Filter Pills */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 scrollbar-none">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mr-1 flex-shrink-0">
-              Category:
-            </span>
-            {[
-              { id: "all", label: "All Fleet" },
-              { id: "Supercars", label: "Supercars" },
-              { id: "Hypercars", label: "Hypercars" },
-              { id: "Sports Cars", label: "Sports Cars" },
-              { id: "Luxury SUVs", label: "Luxury SUVs" },
-              { id: "Grand Tourers", label: "Grand Tourers" },
-              { id: "Electric Exotics", label: "Electric Exotics" }
-            ].map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => onSelectCategory(cat.id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                  selectedCategory === cat.id
-                    ? 'bg-gold-400 text-luxury-950 shadow-glow-gold'
-                    : 'bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/10'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+          {/* Premier Category Filter Pill Bar */}
+          <div className="relative w-full pt-1 pb-1">
+            {/* Scroll Left Button */}
+            <AnimatePresence>
+              {canScrollLeft && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  onClick={() => handleScroll('left')}
+                  className="absolute -left-2 sm:-left-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-luxury-900/95 border border-gold-400/50 text-gold-400 flex items-center justify-center shadow-xl shadow-black/80 hover:bg-gold-400 hover:text-luxury-950 transition-all cursor-pointer"
+                  title="Scroll Categories Left"
+                  aria-label="Scroll left"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </motion.button>
+              )}
+            </AnimatePresence>
+
+            {/* Scroll Right Button */}
+            <AnimatePresence>
+              {canScrollRight && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  onClick={() => handleScroll('right')}
+                  className="absolute -right-2 sm:-right-3 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-luxury-900/95 border border-gold-400/50 text-gold-400 flex items-center justify-center shadow-xl shadow-black/80 hover:bg-gold-400 hover:text-luxury-950 transition-all cursor-pointer"
+                  title="Scroll Categories Right"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </motion.button>
+              )}
+            </AnimatePresence>
+
+            {/* Pill Container */}
+            <div 
+              ref={scrollRef}
+              onScroll={updateScrollState}
+              className={`w-full overflow-x-auto scrollbar-none py-1 scroll-smooth flex ${
+                isOverflowing ? 'justify-start' : 'justify-start sm:justify-center'
+              }`}
+            >
+              <div className="inline-flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+                {categoryPills.map((cat) => {
+                  const Icon = ICON_MAP[cat.icon] || Sparkles;
+                  const isSelected = selectedCategory === cat.id;
+                  return (
+                    <motion.button
+                      key={cat.id}
+                      id={`category-pill-${cat.id.toLowerCase().replace(/\s+/g, '-')}`}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      onClick={() => {
+                        onSelectCategory(cat.id);
+                        if (selectedBrand !== "all" && onSelectBrand) {
+                          onSelectBrand("all");
+                        }
+                      }}
+                      className={`flex-shrink-0 flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold transition-all duration-300 border cursor-pointer select-none whitespace-nowrap ${
+                        isSelected
+                          ? 'bg-gradient-to-r from-gold-400 via-amber-500 to-amber-600 text-luxury-950 border-gold-400 shadow-glow-gold'
+                          : 'bg-luxury-900/80 text-slate-300 border-white/10 hover:border-gold-400/40 hover:bg-white/5'
+                      }`}
+                    >
+                      <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${isSelected ? 'text-luxury-950' : 'text-gold-400'}`} />
+                      <span className="whitespace-nowrap">{cat.name}</span>
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono flex-shrink-0 ${isSelected ? 'bg-luxury-950/25 text-luxury-950 font-bold' : 'bg-white/10 text-slate-400'}`}>
+                        {cat.count}
+                      </span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           {/* Expandable Advanced Filter Drawer */}
@@ -443,7 +559,7 @@ export default function CollectionGallery({
                 <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
                   <span className="uppercase tracking-wider font-semibold">Max Price</span>
                   <span className="font-mono font-bold text-gold-400">
-                    {maxPrice >= 300000000 ? "Any (₹30 Cr+)" : `₹${(maxPrice / 10000000).toFixed(2)} Cr`}
+                    {maxPrice >= 300000000 ? `Any (${formatPriceByCurrency(300000000, currentCurrency)}+)` : formatPriceByCurrency(maxPrice, currentCurrency)}
                   </span>
                 </div>
                 <input

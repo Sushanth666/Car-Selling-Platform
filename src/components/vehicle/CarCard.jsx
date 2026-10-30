@@ -289,6 +289,7 @@ export default function CarCard({
             <div className="flex items-center gap-1.5 pointer-events-auto">
             {/* Compare Checkbox Button */}
             <button
+              id={`compare-toggle-${car.id}`}
               onClick={(e) => {
                 e.stopPropagation();
                 onToggleCompare(car);
@@ -305,6 +306,7 @@ export default function CarCard({
 
             {/* Wishlist Heart Button */}
             <button
+              id={`wishlist-toggle-${car.id}`}
               onClick={(e) => {
                 e.stopPropagation();
                 onToggleWishlist(car);

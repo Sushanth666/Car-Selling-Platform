@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calculator, ShieldCheck, Building2, Check, ArrowRight } from 'lucide-react';
 import { CARS_DATA } from '../../data/cars';
+import { formatPriceByCurrency } from '../../utils/currency';
 
 const INDIAN_STATES = [
   { id: 'TN', name: 'Tamil Nadu (Chennai / Coimbatore)', rtoRate: 0.15, cess: 0.22 },
@@ -12,7 +13,7 @@ const INDIAN_STATES = [
   { id: 'TS', name: 'Telangana (Hyderabad)', rtoRate: 0.14, cess: 0.22 }
 ];
 
-export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = null, onOpenBooking }) {
+export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = null, onOpenBooking, currentCurrency = "INR" }) {
   const [selectedCarId, setSelectedCarId] = useState(initialCar?.id || CARS_DATA[0].id);
   const [selectedStateCode, setSelectedStateCode] = useState('TN');
   const [activeTab, setActiveTab] = useState('onroad'); // 'onroad' | 'emi' | 'corporate'
@@ -70,10 +71,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
   if (!isOpen) return null;
 
   const formatLakhCr = (val) => {
-    if (val >= 10000000) {
-      return `₹${(val / 10000000).toFixed(2)} Cr`;
-    }
-    return `₹${(val / 100000).toFixed(2)} Lakh`;
+    return formatPriceByCurrency(val, currentCurrency);
   };
 
   return (
@@ -134,7 +132,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                 >
                   {CARS_DATA.map((c) => (
                     <option key={c.id} value={c.id} className="bg-luxury-950">
-                      {c.name} — {c.priceFormatted}
+                      {c.name} — {formatPriceByCurrency(c.price, currentCurrency)}
                     </option>
                   ))}
                 </select>
@@ -213,7 +211,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                   </div>
                   <div className="flex justify-between items-center text-sm py-1 border-b border-white/5">
                     <span className="text-slate-300">Registration, Fastag, Logistics & Master PDI</span>
-                    <span className="font-mono font-medium text-slate-200">₹1,25,000</span>
+                    <span className="font-mono font-medium text-slate-200">{formatPriceByCurrency(125000, currentCurrency)}</span>
                   </div>
 
                   <div className="pt-3 flex justify-between items-center text-base sm:text-lg font-bold border-t border-gold-400/30">
@@ -322,7 +320,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                       Estimated Monthly Outflow
                     </span>
                     <span className="text-xl sm:text-2xl font-bold font-mono text-gold-400">
-                      ₹{monthlyEmi.toLocaleString('en-IN')}
+                      {formatPriceByCurrency(monthlyEmi, currentCurrency)}
                     </span>
                     <span className="text-[10px] text-slate-500 block mt-1">per month</span>
                   </div>

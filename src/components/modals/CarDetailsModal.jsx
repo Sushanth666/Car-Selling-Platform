@@ -91,13 +91,7 @@ export default function CarDetailsModal({
   ) : 0;
 
   const formatINR = (val) => {
-    if (val >= 10000000) {
-      return `₹${(val / 10000000).toFixed(2)} Cr`;
-    }
-    if (val >= 100000) {
-      return `₹${(val / 100000).toFixed(2)} Lakhs`;
-    }
-    return `₹${Math.round(val).toLocaleString('en-IN')}`;
+    return formatPriceByCurrency(val, currentCurrency);
   };
 
   const handleRevAudio = () => {
@@ -132,6 +126,7 @@ export default function CarDetailsModal({
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.94, opacity: 0, y: 15 }}
         transition={{ type: "spring", damping: 25, stiffness: 320 }}
+        id="car-details-modal"
         className="relative w-full max-w-6xl bg-luxury-950 border border-white/15 rounded-3xl overflow-hidden shadow-2xl my-auto max-h-[94vh] flex flex-col cursor-default"
         onClick={(e) => e.stopPropagation()}
       >
@@ -186,9 +181,11 @@ export default function CarDetailsModal({
 
             {/* Close Modal */}
             <button
+              id="car-details-close-btn"
               onClick={onClose}
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors ml-2"
+              className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors ml-2 cursor-pointer"
               title="Close (Esc)"
+              aria-label="Close modal"
             >
               <X className="w-5 h-5" />
             </button>
@@ -594,7 +591,7 @@ export default function CarDetailsModal({
                 <div className="text-right">
                   <span className="text-xs uppercase text-slate-400 block">Est. Monthly Investment</span>
                   <span className="text-2xl sm:text-3xl font-display font-extrabold text-gold-400">
-                    ₹{estimatedMonthly.toLocaleString('en-IN')} <span className="text-xs text-slate-400 font-normal">/mo</span>
+                    {formatPriceByCurrency(estimatedMonthly, currentCurrency)} <span className="text-xs text-slate-400 font-normal">/mo</span>
                   </span>
                 </div>
               </div>

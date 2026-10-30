@@ -6,6 +6,7 @@ import {
   BatteryCharging, CornerDownLeft
 } from 'lucide-react';
 import { matchesCarQuery, POPULAR_SEARCH_OPTIONS } from '../../utils/searchHelper';
+import { formatPriceByCurrency } from '../../utils/currency';
 
 const ICON_MAP = {
   Crown: Crown,
@@ -26,7 +27,8 @@ export default function SearchModal({
   onInspectCar,
   onBookTestDrive,
   onSelectCategory,
-  onViewAllInCollection
+  onViewAllInCollection,
+  currentCurrency = "INR"
 }) {
   const inputRef = useRef(null);
   const [internalQuery, setInternalQuery] = useState(searchQuery || "");
@@ -236,9 +238,9 @@ export default function SearchModal({
               <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mr-1">Price:</span>
               {[
                 { id: "all", label: "All" },
-                { id: "under5", label: "< ₹5 Cr" },
-                { id: "5to10", label: "₹5–₹10 Cr" },
-                { id: "above10", label: "> ₹10 Cr" }
+                { id: "under5", label: `< ${formatPriceByCurrency(50000000, currentCurrency)}` },
+                { id: "5to10", label: `${formatPriceByCurrency(50000000, currentCurrency)}–${formatPriceByCurrency(100000000, currentCurrency)}` },
+                { id: "above10", label: `> ${formatPriceByCurrency(100000000, currentCurrency)}` }
               ].map((p) => (
                 <button
                   key={p.id}
@@ -323,7 +325,7 @@ export default function SearchModal({
 
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-300 mt-1">
                         <span className="font-display font-bold text-gold-400 text-sm tracking-tight">
-                          {car.priceFormatted}
+                          {formatPriceByCurrency(car.price, currentCurrency)}
                         </span>
                         <span className="text-white/20">|</span>
                         <span className="flex items-center gap-1 text-[11px] text-slate-400">

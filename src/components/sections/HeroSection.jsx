@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, Gauge, Zap, Compass, ArrowRight, ShieldCheck, Award, Sparkles } from 'lucide-react';
 import { engineSound } from '../../utils/engineSound';
+import { formatPriceByCurrency } from '../../utils/currency';
 import AureusLogo from '../common/AureusLogo';
 
-export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive }) {
+export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive, currentCurrency = "INR" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevving, setIsRevving] = useState(false);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
@@ -120,9 +121,9 @@ export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive })
                   {activeCar.name}
                 </h1>
                 <p className="text-gold-400 font-display text-2xl sm:text-3xl font-semibold mt-2 text-3d-gold">
-                  {activeCar.priceFormatted}
+                  {formatPriceByCurrency(activeCar.price, currentCurrency)}
                   <span className="text-xs text-slate-400 ml-2 font-normal font-sans tracking-normal uppercase">
-                    Ex-Showroom India Delivery
+                    Ex-Showroom Allocation
                   </span>
                 </p>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl line-clamp-3 mt-3">
@@ -134,6 +135,7 @@ export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive })
             {/* Action Buttons with Framer Motion Micro-interactions */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <motion.button
+                id="hero-inspect-specs-btn"
                 whileHover={{ scale: 1.04, boxShadow: "0 0 35px -5px rgba(229, 184, 58, 0.45)" }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onInspectCar(activeCar)}
@@ -144,6 +146,7 @@ export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive })
               </motion.button>
 
               <motion.button
+                id="hero-book-testdrive-btn"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => onBookTestDrive(activeCar)}
@@ -154,6 +157,7 @@ export default function HeroSection({ heroCars, onInspectCar, onBookTestDrive })
 
               {/* Engine Exhaust Sound Simulator Trigger */}
               <motion.button
+                id="hero-rev-audio-btn"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={handleRevEngine}

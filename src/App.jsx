@@ -30,7 +30,7 @@ import {
 // Shared Feedback & Concierge
 import { QuickToast, WhatsAppConcierge } from './components';
 
-import { CARS_DATA, CATEGORIES } from './data/cars';
+import { CARS_DATA } from './data/cars';
 
 export default function App() {
   // Wishlist state with localStorage persistence
@@ -190,6 +190,18 @@ export default function App() {
         setInspectedCar(car);
       },
       closeDetails: () => setInspectedCar(null),
+      openBooking: (indexOrId = 0) => {
+        const car = typeof indexOrId === 'number' ? CARS_DATA[indexOrId] : (CARS_DATA.find(c => c.id === indexOrId) || CARS_DATA[0]);
+        setBookingCar(car);
+        setIsBookingOpen(true);
+      },
+      closeBooking: () => setIsBookingOpen(false),
+      openSearch: () => setIsSearchOpen(true),
+      closeSearch: () => setIsSearchOpen(false),
+      openWishlist: () => setIsWishlistOpen(true),
+      closeWishlist: () => setIsWishlistOpen(false),
+      openCompare: () => setIsCompareOpen(true),
+      closeCompare: () => setIsCompareOpen(false),
       openDragRace: () => setIsDragRaceOpen(true),
       closeDragRace: () => setIsDragRaceOpen(false),
       openRevBattle: () => setIsRevBattleOpen(true),
@@ -200,6 +212,7 @@ export default function App() {
         setIsFinanceOpen(true);
       },
       closeFinance: () => setIsFinanceOpen(false),
+      setCurrency: (code) => handleCurrencyChange(code),
       closeAll: () => {
         setInspectedCar(null);
         setIsDragRaceOpen(false);
@@ -347,15 +360,7 @@ export default function App() {
         heroCars={heroCars}
         onInspectCar={(car) => handleInspectCar(car)}
         onBookTestDrive={(car) => handleOpenBooking(car)}
-      />
-
-      {/* Prestigious Brands & Categories Showcase */}
-      <BrandsCategories
-        categories={CATEGORIES}
-        selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
-        selectedBrand={selectedBrand}
-        onSelectBrand={setSelectedBrand}
+        currentCurrency={currentCurrency}
       />
 
       {/* Main Car Collection Gallery with Live Filters, Sort & Search */}
@@ -382,6 +387,12 @@ export default function App() {
         onOpenSpecSheet={handleOpenSpecSheet}
         onOpenDragRace={handleOpenDragRace}
         onOpenRevBattle={handleOpenRevBattle}
+      />
+
+      {/* Prestigious Automotive Marques Showcase */}
+      <BrandsCategories
+        selectedBrand={selectedBrand}
+        onSelectBrand={setSelectedBrand}
       />
 
       {/* Atelier Heritage & Concierge Pillars */}
@@ -443,6 +454,7 @@ export default function App() {
             onAddCarToCompare={handleAddCarToCompare}
             onClearCompare={handleClearCompare}
             onBookTestDrive={(car) => handleOpenBooking(car)}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -465,6 +477,7 @@ export default function App() {
             }}
             onBookTestDrive={(car) => handleOpenBooking(car)}
             onInspectCar={(car) => handleInspectCar(car)}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -478,6 +491,7 @@ export default function App() {
             initialCar={bookingCar}
             allCars={CARS_DATA}
             onSuccess={showToast}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -498,6 +512,7 @@ export default function App() {
               const el = document.getElementById('collection');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -531,6 +546,7 @@ export default function App() {
             onClose={() => setIsFinanceOpen(false)}
             initialCar={financeCar || inspectedCar || CARS_DATA[0]}
             onOpenBooking={(car) => handleOpenBooking(car)}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -543,6 +559,7 @@ export default function App() {
             onClose={() => setIsSpecSheetOpen(false)}
             car={specCar}
             activeColor={specColor}
+            currentCurrency={currentCurrency}
           />
         )}
       </AnimatePresence>
@@ -550,7 +567,9 @@ export default function App() {
       {/* 💬 VIP WhatsApp Concierge Floating Action Widget */}
       <WhatsAppConcierge
         activeCar={inspectedCar || bookingCar || CARS_DATA[0]}
+        allCars={CARS_DATA}
         onOpenBooking={(car) => handleOpenBooking(car)}
+        currentCurrency={currentCurrency}
       />
 
       {/* Quick Micro-Toast Notification */}

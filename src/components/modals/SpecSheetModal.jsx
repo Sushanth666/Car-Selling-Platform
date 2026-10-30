@@ -2,8 +2,9 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Printer, ShieldCheck, Sparkles } from 'lucide-react';
 import AureusLogo from '../common/AureusLogo';
+import { formatPriceByCurrency } from '../../utils/currency';
 
-export default function SpecSheetModal({ isOpen, onClose, car, activeColor }) {
+export default function SpecSheetModal({ isOpen, onClose, car, activeColor, currentCurrency = "INR" }) {
   if (!isOpen || !car) return null;
 
   const currentColor = activeColor || car.defaultColour || car.availableColours?.[0] || {
@@ -185,7 +186,7 @@ export default function SpecSheetModal({ isOpen, onClose, car, activeColor }) {
               <div className="sm:col-span-4 text-right flex flex-col items-end border-t sm:border-t-0 sm:border-l border-white/10 print:border-black/20 pt-4 sm:pt-0 sm:pl-6">
                 <span className="text-[10px] uppercase tracking-wider text-slate-400 print:text-slate-600 block">Ex-Showroom Valuation</span>
                 <span className="text-xl sm:text-2xl font-bold font-mono text-gold-400 print:text-black">
-                  {car.priceFormatted}
+                  {formatPriceByCurrency(car.price, currentCurrency)}
                 </span>
                 <span className="text-[9px] text-slate-400 print:text-slate-500 uppercase tracking-wider">
                   Plus applicable State RTO

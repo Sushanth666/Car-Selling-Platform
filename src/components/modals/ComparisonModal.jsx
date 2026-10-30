@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { X, Scale, Zap, Gauge, Compass, Trash2, Plus, Calendar, Award } from 'lucide-react';
+import { formatPriceByCurrency } from '../../utils/currency';
 
 export default function ComparisonModal({
   isOpen,
@@ -10,7 +11,8 @@ export default function ComparisonModal({
   onRemoveFromCompare,
   onAddCarToCompare,
   onClearCompare,
-  onBookTestDrive
+  onBookTestDrive,
+  currentCurrency = "INR"
 }) {
   React.useEffect(() => {
     if (!isOpen) return;
@@ -128,7 +130,9 @@ export default function ComparisonModal({
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-slate-400">{car.brand}</p>
                       <h4 className="font-display font-bold text-base text-white line-clamp-1">{car.name}</h4>
-                      <p className="text-lg font-display font-extrabold text-gold-400 mt-1">{car.priceFormatted}</p>
+                      <p className="text-lg font-display font-extrabold text-gold-400 mt-1">
+                        {formatPriceByCurrency(car.price, currentCurrency)}
+                      </p>
                     </div>
 
                     <button
@@ -166,7 +170,7 @@ export default function ComparisonModal({
                         <option value="" disabled>Select vehicle...</option>
                         {availableCars.map(c => (
                           <option key={c.id} value={c.id}>
-                            {c.brand} {c.name} ({c.priceFormatted})
+                            {c.brand} {c.name} ({formatPriceByCurrency(c.price, currentCurrency)})
                           </option>
                         ))}
                       </select>
@@ -310,7 +314,7 @@ export default function ComparisonModal({
                       <td className="p-4 font-semibold text-slate-400 bg-white/[0.02]">Ex-Showroom Price (India)</td>
                       {comparedCars.map(c => (
                         <td key={c.id} className="p-4 font-bold text-gold-400 text-sm font-display">
-                          {c.priceFormatted}
+                          {formatPriceByCurrency(c.price, currentCurrency)}
                         </td>
                       ))}
                     </tr>

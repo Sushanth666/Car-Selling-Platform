@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { X, Heart, Trash2, Calendar, Scale, Sparkles } from 'lucide-react';
+import { formatPriceByCurrency } from '../../utils/currency';
 
 export default function WishlistDrawer({
   isOpen,
@@ -10,7 +11,8 @@ export default function WishlistDrawer({
   onClearWishlist,
   onOpenCompareWithCars,
   onBookTestDrive,
-  onInspectCar
+  onInspectCar,
+  currentCurrency = "INR"
 }) {
   React.useEffect(() => {
     if (!isOpen) return;
@@ -78,9 +80,7 @@ export default function WishlistDrawer({
               <span className="text-xs text-slate-300">Total Garage Valuation:</span>
             </div>
             <span className="text-base font-display font-extrabold text-gold-400">
-              {totalValuation >= 10000000
-                ? `₹${(totalValuation / 10000000).toFixed(2)} Cr`
-                : `₹${(totalValuation / 100000).toFixed(2)} Lakhs`}
+              {formatPriceByCurrency(totalValuation, currentCurrency)}
             </span>
           </div>
         )}
@@ -135,7 +135,7 @@ export default function WishlistDrawer({
                       {car.name}
                     </h4>
                     <p className="text-xs font-display font-bold text-gold-400 mt-0.5">
-                      {car.priceFormatted}
+                      {formatPriceByCurrency(car.price, currentCurrency)}
                     </p>
                   </div>
 

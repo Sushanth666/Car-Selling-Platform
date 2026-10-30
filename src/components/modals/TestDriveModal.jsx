@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { X, Calendar, CheckCircle2, Clock, MapPin, ShieldCheck, Car } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { formatPriceByCurrency } from '../../utils/currency';
 
 export default function TestDriveModal({
   isOpen,
   onClose,
   initialCar,
   allCars,
-  onSuccess
+  onSuccess,
+  currentCurrency = "INR"
 }) {
   const [selectedCarId, setSelectedCarId] = useState(initialCar?.id || allCars?.[0]?.id || "");
   const [atelierLocation, setAtelierLocation] = useState("Mumbai Atelier (Bandra Kurla Complex / BKC)");
@@ -197,7 +199,7 @@ export default function TestDriveModal({
                 >
                   {allCars?.map((car) => (
                     <option key={car.id} value={car.id}>
-                      {car.name} ({car.category} • {car.horsepower} HP • {car.priceFormatted})
+                      {car.name} ({car.category} • {car.horsepower} HP • {formatPriceByCurrency(car.price, currentCurrency)})
                     </option>
                   ))}
                 </select>
@@ -356,6 +358,7 @@ export default function TestDriveModal({
               {/* Submit CTA */}
               <div className="pt-2">
                 <button
+                  id="testdrive-submit-btn"
                   type="submit"
                   className="w-full py-4 rounded-2xl bg-gradient-to-r from-gold-400 via-amber-500 to-amber-600 hover:from-gold-300 hover:to-amber-500 text-luxury-950 font-bold text-sm uppercase tracking-widest shadow-glow-gold hover:shadow-xl transition-all duration-300"
                 >

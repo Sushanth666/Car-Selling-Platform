@@ -1,72 +1,19 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, Flame, Zap, Compass, Crown, Shield, BatteryCharging, 
-  ArrowUpRight, Award, ChevronLeft, ChevronRight 
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Award } from 'lucide-react';
 import { BRANDS_DATA } from '../../data/brands';
 
-const ICON_MAP = {
-  Sparkles: Sparkles,
-  Flame: Flame,
-  Zap: Zap,
-  Compass: Compass,
-  Crown: Crown,
-  Shield: Shield,
-  BatteryCharging: BatteryCharging
-};
-
 export default function BrandsCategories({
-  categories,
-  selectedCategory,
-  onSelectCategory,
   selectedBrand,
   onSelectBrand
 }) {
-  const scrollRef = useRef(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-  const [isOverflowing, setIsOverflowing] = useState(false);
-
-  const updateScrollState = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      const overflows = scrollWidth > clientWidth + 4;
-      setIsOverflowing(overflows);
-      setCanScrollLeft(scrollLeft > 15);
-      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 15);
-    }
-  };
-
-  useEffect(() => {
-    updateScrollState();
-    const handleResize = () => {
-      updateScrollState();
-    };
-    window.addEventListener('resize', handleResize);
-    const t = setTimeout(updateScrollState, 100);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      clearTimeout(t);
-    };
-  }, [categories]);
-
-  const handleScroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -260 : 260,
-        behavior: 'smooth'
-      });
-      setTimeout(updateScrollState, 350);
-    }
-  };
   return (
     <section id="brands" className="py-20 relative bg-luxury-950 overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-crimson-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         
         {/* Section Header */}
         <motion.div 
@@ -81,88 +28,12 @@ export default function BrandsCategories({
             <span>Icons of Automotive Heritage</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
-            Prestigious Marques & Classifications
+            Prestigious Automotive Marques
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            From the visceral screaming V12s of Maranello and Sant’Agata to the whispering electrified sanctuaries of Goodwood, explore by marque or dynamic body silhouette.
+            From the visceral screaming V12s of Maranello and Sant’Agata to the whispering electrified sanctuaries of Goodwood, explore world-renowned automotive houses.
           </p>
         </motion.div>
-
-        {/* Categories Tab Pill Bar */}
-        <div className="relative w-full mx-auto">
-          {/* Scroll Left Button (if overflowed) */}
-          <AnimatePresence>
-            {canScrollLeft && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                onClick={() => handleScroll('left')}
-                className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 w-9 h-9 rounded-full bg-luxury-900/95 border border-gold-400/50 text-gold-400 flex items-center justify-center shadow-xl shadow-black/80 hover:bg-gold-400 hover:text-luxury-950 transition-all cursor-pointer"
-                title="Scroll Categories Left"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </motion.button>
-            )}
-          </AnimatePresence>
-
-          {/* Scroll Right Button (if overflowed) */}
-          <AnimatePresence>
-            {canScrollRight && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                onClick={() => handleScroll('right')}
-                className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 w-9 h-9 rounded-full bg-luxury-900/95 border border-gold-400/50 text-gold-400 flex items-center justify-center shadow-xl shadow-black/80 hover:bg-gold-400 hover:text-luxury-950 transition-all cursor-pointer"
-                title="Scroll Categories Right"
-                aria-label="Scroll right"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </motion.button>
-            )}
-          </AnimatePresence>
-
-          {/* Pill Container - Safe start-alignment with generous padding so the first button is NEVER cut off */}
-          <div 
-            ref={scrollRef}
-            onScroll={updateScrollState}
-            className={`w-full overflow-x-auto scrollbar-none py-3 px-3 sm:px-6 scroll-smooth flex ${
-              isOverflowing ? 'justify-start' : 'justify-center'
-            }`}
-          >
-            <div className="inline-flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
-              {categories.map((cat) => {
-                const Icon = ICON_MAP[cat.icon] || Sparkles;
-                const isSelected = selectedCategory === cat.id;
-                return (
-                  <motion.button
-                    key={cat.id}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    onClick={() => {
-                      onSelectCategory(cat.id);
-                      const el = document.getElementById('collection');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className={`flex-shrink-0 flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all duration-300 border cursor-pointer select-none whitespace-nowrap ${
-                      isSelected
-                        ? 'bg-gradient-to-r from-gold-400 via-amber-500 to-amber-600 text-luxury-950 border-gold-400 shadow-glow-gold'
-                        : 'bg-luxury-900/80 text-slate-300 border-white/10 hover:border-gold-400/40 hover:bg-white/5'
-                    }`}
-                  >
-                    <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${isSelected ? 'text-luxury-950' : 'text-gold-400'}`} />
-                    <span className="whitespace-nowrap">{cat.name}</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono flex-shrink-0 ${isSelected ? 'bg-luxury-950/25 text-luxury-950 font-bold' : 'bg-white/10 text-slate-400'}`}>
-                      {cat.count}
-                    </span>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
 
         {/* Premier Brands Grid with 3D Spatial Presence */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 perspective-1000">
