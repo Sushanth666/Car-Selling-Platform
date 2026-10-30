@@ -308,5 +308,5 @@ src/
 
 ## 📄 License & Provenance
 
-© 2026 **APEX ATELIER INDIA PRIVATE LIMITED**. All Rights Reserved.  
+© 2026 **AUREUS VELOCE (THE SOVEREIGN KINETIC) PRIVATE LIMITED**. All Rights Reserved.  
 Registered Office: One BKC, G-Block, Bandra Kurla Complex, Mumbai, Maharashtra 400051, India.

@@ -33,7 +33,7 @@ export default function TestDriveModal({
     if (!fullName || !email || !phone) return;
 
     // Generate unique VIP confirmation reference
-    const code = `APEX-${Math.floor(1000 + Math.random() * 9000)}-${currentSelectedCar.brand?.slice(0, 3).toUpperCase() || 'VIP'}`;
+    const code = `AUREUS-${Math.floor(1000 + Math.random() * 9000)}-${currentSelectedCar.brand?.slice(0, 3).toUpperCase() || 'VIP'}`;
     setReservationCode(code);
     setIsSubmitted(true);
 

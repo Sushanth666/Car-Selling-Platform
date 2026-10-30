@@ -1,4 +1,4 @@
-// Currency Conversion Utility for Apex Atelier India
+// Currency Conversion Utility for Aureus Veloce (The Sovereign Kinetic)
 // Base currency: INR (₹)
 // Target currencies: INR (₹), USD ($), EUR (€), AED (د.إ)
 

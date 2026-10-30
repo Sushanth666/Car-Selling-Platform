@@ -117,7 +117,7 @@ export const BRANDS_DATA = [
 export const FAQ_DATA = [
   {
     question: "How can I reserve a private test drive in India?",
-    answer: "You can schedule an exclusive test drive through our digital booking portal or by contacting your dedicated Apex Concierge. Test drives can be hosted at our South Indian ateliers in Chennai (Boat Club Road), Coimbatore (Race Course), Cochin (Marine Drive), Mangalore (Kadri Hills), Bengaluru (UB City), Hyderabad (Jubilee Hills), or our Mumbai (BKC) and New Delhi (Aerocity) salons, as well as delivered directly to your private estate anywhere in India via our hydraulic enclosed transporters."
+    answer: "You can schedule an exclusive test drive through our digital booking portal or by contacting your dedicated Aureus Concierge. Test drives can be hosted at our South Indian ateliers in Chennai (Boat Club Road), Coimbatore (Race Course), Cochin (Marine Drive), Mangalore (Kadri Hills), Bengaluru (UB City), Hyderabad (Jubilee Hills), or our Mumbai (BKC) and New Delhi (Aerocity) salons, as well as delivered directly to your private estate anywhere in India via our hydraulic enclosed transporters."
   },
   {
     question: "Are all vehicles Right-Hand Drive (RHD) and compliant with Indian regulations?",

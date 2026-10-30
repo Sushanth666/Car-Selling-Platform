@@ -1,4 +1,4 @@
-// Master dataset for Apex Atelier India - Luxury, Supercars & Exotic Fleet
+// Master dataset for Aureus Veloce (The Sovereign Kinetic) - Luxury, Supercars & Exotic Fleet
 // Exclusively configured for Indian High-Net-Worth Connoisseurs with INR (₹ Cr) pricing,
 // Metric telemetry (km/h & 0-100 km/h), RHD configuration, and Real-Time Paint Customization.
 
