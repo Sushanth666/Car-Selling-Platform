@@ -12,7 +12,7 @@ export default function Navbar({
   activeSection,
   setActiveSection,
   searchQuery = '',
-  setSearchQuery,
+  setSearchQuery: _setSearchQuery,
   onOpenSearchModal,
   currentCurrency = "INR",
   onCurrencyChange,

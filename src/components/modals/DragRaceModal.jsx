@@ -64,7 +64,8 @@ export default function DragRaceModal({ isOpen, onClose, initialCar1 = null }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        handleClose();
+        resetRace();
+        onClose();
       }
     };
     if (isOpen) {
@@ -74,7 +75,7 @@ export default function DragRaceModal({ isOpen, onClose, initialCar1 = null }) {
       window.removeEventListener('keydown', handleKeyDown);
       stopAnimationAndAudio();
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   const startRace = () => {
     if (raceState !== 'idle') return;

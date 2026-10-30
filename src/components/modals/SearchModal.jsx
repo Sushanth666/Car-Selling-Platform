@@ -25,8 +25,8 @@ export default function SearchModal({
   setSearchQuery,
   onInspectCar,
   onBookTestDrive,
-  onSelectCategory,
-  onViewAllInCollection
+  onSelectCategory: _onSelectCategory,
+  onViewAllInCollection: _onViewAllInCollection
 }) {
   const inputRef = useRef(null);
   const [internalQuery, setInternalQuery] = useState(searchQuery || "");
@@ -145,6 +145,9 @@ export default function SearchModal({
 
           <div className="relative flex-1">
             <input
+              id="fleet-search-input"
+              name="searchQuery"
+              aria-label="Search fleet by car name, marque, or engine"
               ref={inputRef}
               type="text"
               placeholder="Search by car name, marque, engine (e.g. Rolls-Royce, Ferrari, V12, GT3 RS)..."
@@ -159,7 +162,9 @@ export default function SearchModal({
             />
             {internalQuery && (
               <button
+                type="button"
                 onClick={clearSearch}
+                aria-label="Clear search input"
                 className="absolute right-0 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
                 title="Clear input"
               >

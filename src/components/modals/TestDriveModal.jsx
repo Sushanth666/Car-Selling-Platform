@@ -184,16 +184,18 @@ export default function TestDriveModal({
               
               {/* Vehicle Selection */}
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                <label htmlFor="testdrive-car-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
                   <Car className="w-3.5 h-3.5 text-gold-400" />
                   Select Vehicle for Test Drive
                 </label>
                 <select
+                  id="testdrive-car-select"
+                  name="vehicle"
                   value={selectedCarId}
                   onChange={(e) => setSelectedCarId(e.target.value)}
                   className="w-full bg-luxury-900 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400"
                 >
-                  {allCars.map((car) => (
+                  {allCars?.map((car) => (
                     <option key={car.id} value={car.id}>
                       {car.name} ({car.category} • {car.horsepower} HP • {car.priceFormatted})
                     </option>
@@ -203,11 +205,13 @@ export default function TestDriveModal({
 
               {/* Showroom Atelier Location */}
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                <label htmlFor="testdrive-location-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
                   <MapPin className="w-3.5 h-3.5 text-gold-400" />
                   Atelier / Delivery Location
                 </label>
                 <select
+                  id="testdrive-location-select"
+                  name="atelierLocation"
                   value={atelierLocation}
                   onChange={(e) => setAtelierLocation(e.target.value)}
                   className="w-full bg-luxury-900 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400"
@@ -227,11 +231,13 @@ export default function TestDriveModal({
               {/* Date & Time Slot Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                  <label htmlFor="testdrive-date-input" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
                     <Calendar className="w-3.5 h-3.5 text-gold-400" />
                     Preferred Date
                   </label>
                   <input
+                    id="testdrive-date-input"
+                    name="appointmentDate"
                     type="date"
                     required
                     value={appointmentDate}
@@ -241,11 +247,13 @@ export default function TestDriveModal({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
+                  <label htmlFor="testdrive-time-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-2">
                     <Clock className="w-3.5 h-3.5 text-gold-400" />
                     Time Window
                   </label>
                   <select
+                    id="testdrive-time-select"
+                    name="timeSlot"
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
                     className="w-full bg-luxury-900 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400"
@@ -266,7 +274,11 @@ export default function TestDriveModal({
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div>
+                    <label htmlFor="testdrive-fullname" className="sr-only">Full Name</label>
                     <input
+                      id="testdrive-fullname"
+                      name="fullName"
+                      aria-label="Full Name"
                       type="text"
                       required
                       placeholder="Full Name *"
@@ -277,7 +289,11 @@ export default function TestDriveModal({
                   </div>
 
                   <div>
+                    <label htmlFor="testdrive-email" className="sr-only">Private Email</label>
                     <input
+                      id="testdrive-email"
+                      name="email"
+                      aria-label="Private Email"
                       type="email"
                       required
                       placeholder="Private Email *"
@@ -288,7 +304,11 @@ export default function TestDriveModal({
                   </div>
 
                   <div>
+                    <label htmlFor="testdrive-phone" className="sr-only">Mobile or WhatsApp Number</label>
                     <input
+                      id="testdrive-phone"
+                      name="phone"
+                      aria-label="Mobile or WhatsApp Number"
                       type="tel"
                       required
                       placeholder="+91 Mobile / WhatsApp *"
@@ -301,7 +321,11 @@ export default function TestDriveModal({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
+                    <label htmlFor="testdrive-experience" className="sr-only">Driver Experience Level</label>
                     <select
+                      id="testdrive-experience"
+                      name="driverExperience"
+                      aria-label="Driver Experience Level"
                       value={driverExperience}
                       onChange={(e) => setDriverExperience(e.target.value)}
                       className="w-full bg-luxury-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-gold-400"
@@ -314,7 +338,11 @@ export default function TestDriveModal({
                   </div>
 
                   <div>
+                    <label htmlFor="testdrive-requests" className="sr-only">Special Requests</label>
                     <input
+                      id="testdrive-requests"
+                      name="specialRequests"
+                      aria-label="Special Requests"
                       type="text"
                       placeholder="Special Requests (e.g. Helipad pickup, NDA)..."
                       value={specialRequests}

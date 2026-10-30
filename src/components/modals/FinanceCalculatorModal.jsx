@@ -122,10 +122,12 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
             {/* Top Selection Row: Car Selector & State Selector */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                <label htmlFor="finance-car-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                   Select Masterpiece Chassis
                 </label>
                 <select
+                  id="finance-car-select"
+                  name="selectedCar"
                   value={selectedCarId}
                   onChange={(e) => setSelectedCarId(e.target.value)}
                   className="w-full bg-luxury-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors"
@@ -139,10 +141,12 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                <label htmlFor="finance-state-select" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
                   Registration State / RTO Hub
                 </label>
                 <select
+                  id="finance-state-select"
+                  name="selectedState"
                   value={selectedStateCode}
                   onChange={(e) => setSelectedStateCode(e.target.value)}
                   className="w-full bg-luxury-900 border border-white/15 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-gold-400 transition-colors"
@@ -242,6 +246,9 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                       <span className="text-gold-400 font-mono">{formatLakhCr(downPaymentAmount)}</span>
                     </div>
                     <input
+                      id="finance-down-payment"
+                      name="downPaymentPercent"
+                      aria-label="Down Payment Percentage"
                       type="range"
                       min="15"
                       max="75"
@@ -264,6 +271,9 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                       <span className="text-gold-400 font-mono">{loanTenureMonths} Months ({loanTenureMonths / 12} Yrs)</span>
                     </div>
                     <input
+                      id="finance-loan-tenure"
+                      name="loanTenureMonths"
+                      aria-label="Loan Tenure in Months"
                       type="range"
                       min="12"
                       max="84"
@@ -286,6 +296,9 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                       <span className="text-gold-400 font-mono">{interestRate}% p.a.</span>
                     </div>
                     <input
+                      id="finance-interest-rate"
+                      name="interestRate"
+                      aria-label="Private Bank Interest Rate"
                       type="range"
                       min="7.25"
                       max="11.5"

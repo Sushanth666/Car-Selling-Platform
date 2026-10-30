@@ -99,7 +99,10 @@ export default function RevBattleModal({ isOpen, onClose }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        handleClose();
+        stopAudio();
+        setIsPedalPressed(false);
+        setCurrentRpm(850);
+        onClose();
       }
     };
     if (isOpen) {
@@ -112,7 +115,7 @@ export default function RevBattleModal({ isOpen, onClose }) {
         clearInterval(rpmIntervalRef.current);
       }
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   // Handle pedal press & hold
   useEffect(() => {
