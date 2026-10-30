@@ -9,7 +9,7 @@ export default function WhatsAppConcierge({ activeCar = null, onOpenBooking }) {
   const whatsappNumber = "919876543210";
   const carText = activeCar ? ` regarding the ${activeCar.name} (${activeCar.priceFormatted})` : "";
   const defaultMessage = encodeURIComponent(
-    `Hello Apex Atelier India, I am interested in inquiring${carText}. Please connect me with a Senior Advisory Partner for private allocation details.`
+    `Hello Aureus Veloce India, I am interested in inquiring${carText}. Please connect me with a Senior Advisory Partner for private allocation details.`
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
 
@@ -35,7 +35,7 @@ export default function WhatsAppConcierge({ activeCar = null, onOpenBooking }) {
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-luxury-950" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white leading-none">Apex Private Concierge</h4>
+                  <h4 className="text-sm font-bold text-white leading-none">Aureus Private Concierge</h4>
                   <span className="text-[10px] text-emerald-400 font-medium">Senior Partner Online • 24/7 Escrow</span>
                 </div>
               </div>

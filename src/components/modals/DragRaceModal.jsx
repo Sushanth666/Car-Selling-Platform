@@ -62,10 +62,19 @@ export default function DragRaceModal({ isOpen, onClose, initialCar1 = null }) {
   };
 
   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
     return () => {
+      window.removeEventListener('keydown', handleKeyDown);
       stopAnimationAndAudio();
     };
-  }, []);
+  }, [isOpen]);
 
   const startRace = () => {
     if (raceState !== 'idle') return;
@@ -159,7 +168,7 @@ export default function DragRaceModal({ isOpen, onClose, initialCar1 = null }) {
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-white flex items-center gap-2">
-                  Apex Drag Strip • 0–100 km/h Head-to-Head
+                  Aureus Drag Strip • 0–100 km/h Head-to-Head
                 </h3>
                 <p className="text-xs text-slate-400">
                   Telemetry battle simulator with launch control physics & quarter-mile split times
@@ -431,7 +440,7 @@ export default function DragRaceModal({ isOpen, onClose, initialCar1 = null }) {
               >
                 <div className="inline-flex items-center gap-1.5 text-gold-400 text-xs uppercase tracking-widest font-bold">
                   <Sparkles className="w-4 h-4" />
-                  <span>Apex Quarter-Mile Champion</span>
+                  <span>Aureus Quarter-Mile Champion</span>
                 </div>
                 <h4 className="text-xl font-display font-extrabold text-white">
                   {winner.name} wins by {(Math.abs(car1.accelerationNum - car2.accelerationNum)).toFixed(2)}s!

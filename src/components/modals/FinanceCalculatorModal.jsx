@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calculator, ShieldCheck, Building2, Check, ArrowRight } from 'lucide-react';
 import { CARS_DATA } from '../../data/cars';
@@ -21,6 +21,16 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
   const [downPaymentPercent, setDownPaymentPercent] = useState(25);
   const [loanTenureMonths, setLoanTenureMonths] = useState(60);
   const [interestRate, setInterestRate] = useState(8.65);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   const car = useMemo(() => {
     return CARS_DATA.find(c => c.id === selectedCarId) || CARS_DATA[0];
@@ -213,7 +223,7 @@ export default function FinanceCalculatorModal({ isOpen, onClose, initialCar = n
                 <div className="p-4 rounded-xl bg-gold-400/5 border border-gold-400/20 text-xs text-slate-300 leading-relaxed flex items-start gap-3">
                   <ShieldCheck className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
                   <p>
-                    All allocations cleared directly via Apex Atelier India under complete factory warranty, 3-year scheduled maintenance package, and Pan-India enclosed hydraulic transport direct to your residence.
+                    All allocations cleared directly via Aureus Veloce India under complete factory warranty, 3-year scheduled maintenance package, and Pan-India enclosed hydraulic transport direct to your residence.
                   </p>
                 </div>
               </motion.div>

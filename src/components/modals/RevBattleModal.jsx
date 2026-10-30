@@ -97,13 +97,22 @@ export default function RevBattleModal({ isOpen, onClose }) {
   };
 
   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
     return () => {
+      window.removeEventListener('keydown', handleKeyDown);
       stopAudio();
       if (rpmIntervalRef.current) {
         clearInterval(rpmIntervalRef.current);
       }
     };
-  }, []);
+  }, [isOpen]);
 
   // Handle pedal press & hold
   useEffect(() => {

@@ -13,7 +13,7 @@ export default function Footer({ onSelectCategory, onShowToast }) {
     if (!newsletterEmail) return;
     setSubscribed(true);
     if (onShowToast) {
-      onShowToast(`Welcome to the Apex Private Circle, ${newsletterEmail}.`);
+      onShowToast(`Welcome to the Aureus Private Circle, ${newsletterEmail}.`);
     }
   };
 
@@ -36,7 +36,7 @@ export default function Footer({ onSelectCategory, onShowToast }) {
               Discreet Allocation Bulletins
             </span>
             <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
-              Join the Apex Private Circle
+              Join the Aureus Private Circle
             </h3>
             <p className="text-slate-400 text-xs max-w-lg">
               Receive confidential alerts regarding unlisted hypercar allocations, off-market collector transactions, and invitation-only track events.

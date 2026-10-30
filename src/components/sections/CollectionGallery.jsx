@@ -146,6 +146,9 @@ export default function CollectionGallery({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Drag Strip Card */}
           <div 
+            id="card-drag-strip"
+            role="button"
+            tabIndex={0}
             onClick={() => onOpenDragRace && onOpenDragRace(null)}
             className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-luxury-900 to-luxury-950 border border-amber-500/30 hover:border-amber-400/70 transition-all duration-300 shadow-xl cursor-pointer group hover:scale-[1.02]"
           >
@@ -168,6 +171,9 @@ export default function CollectionGallery({
 
           {/* Sound Lounge Card */}
           <div 
+            id="card-exhaust-sound"
+            role="button"
+            tabIndex={0}
             onClick={() => onOpenRevBattle && onOpenRevBattle()}
             className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-luxury-900 to-luxury-950 border border-orange-500/30 hover:border-orange-400/70 transition-all duration-300 shadow-xl cursor-pointer group hover:scale-[1.02]"
           >
@@ -190,6 +196,9 @@ export default function CollectionGallery({
 
           {/* EMI & Tax Desk Card */}
           <div 
+            id="card-finance-desk"
+            role="button"
+            tabIndex={0}
             onClick={() => onOpenFinance && onOpenFinance(null)}
             className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-luxury-900 to-luxury-950 border border-emerald-500/30 hover:border-emerald-400/70 transition-all duration-300 shadow-xl cursor-pointer group hover:scale-[1.02]"
           >

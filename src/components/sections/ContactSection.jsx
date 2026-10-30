@@ -216,7 +216,7 @@ export default function ContactSection({ onShowToast }) {
                 <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
                 <h4 className="text-lg font-bold text-white">Discreet Inquiry Transmitted</h4>
                 <p className="text-xs text-slate-300 max-w-md mx-auto">
-                  Your communication has been registered. An Apex Senior Concierge partner will reach out within two hours via your specified confidential channel.
+                  Your communication has been registered. An Aureus Senior Concierge partner will reach out within two hours via your specified confidential channel.
                 </p>
                 <button
                   onClick={() => setIsSent(false)}
@@ -379,7 +379,7 @@ export default function ContactSection({ onShowToast }) {
 
             <div className="p-6 rounded-3xl bg-luxury-900/40 border border-white/10 text-center space-y-3">
               <span className="text-[10px] uppercase tracking-wider text-slate-400 font-medium">Direct Telephone Concierge</span>
-              <p className="text-xl font-display font-bold text-white tracking-wider">+1 (800) 890-APEX</p>
+              <p className="text-xl font-display font-bold text-white tracking-wider">+1 (800) 890-AUREUS</p>
               <p className="text-[10px] text-slate-500">24/7 International Dedicated Hotline</p>
             </div>
           </motion.div>

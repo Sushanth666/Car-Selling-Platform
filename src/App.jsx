@@ -165,6 +165,40 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
   }, []);
 
+  // Global automation interface for bulletproof testing & screenshot capture
+  useEffect(() => {
+    window.__aureus = {
+      openDetails: (indexOrId = 0) => {
+        const car = typeof indexOrId === 'number' ? CARS_DATA[indexOrId] : (CARS_DATA.find(c => c.id === indexOrId) || CARS_DATA[0]);
+        setInspectedCar(car);
+      },
+      closeDetails: () => setInspectedCar(null),
+      openDragRace: () => setIsDragRaceOpen(true),
+      closeDragRace: () => setIsDragRaceOpen(false),
+      openRevBattle: () => setIsRevBattleOpen(true),
+      closeRevBattle: () => setIsRevBattleOpen(false),
+      openFinance: (indexOrId = 0) => {
+        const car = typeof indexOrId === 'number' ? CARS_DATA[indexOrId] : (CARS_DATA.find(c => c.id === indexOrId) || CARS_DATA[0]);
+        setFinanceCar(car);
+        setIsFinanceOpen(true);
+      },
+      closeFinance: () => setIsFinanceOpen(false),
+      closeAll: () => {
+        setInspectedCar(null);
+        setIsDragRaceOpen(false);
+        setIsRevBattleOpen(false);
+        setIsFinanceOpen(false);
+        setIsWishlistOpen(false);
+        setIsCompareOpen(false);
+        setIsBookingOpen(false);
+        setIsSearchOpen(false);
+      }
+    };
+    return () => {
+      delete window.__aureus;
+    };
+  }, []);
+
   // Micro-toast notifications
   const [toastMessage, setToastMessage] = useState(null);
 
