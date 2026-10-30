@@ -1,12 +1,17 @@
-# 🦅 AUREUS VELOCE
-### *The Sovereign Kinetic — Bespoke Luxury, Supercars & Exotic Fleet Portal*
+<div align="center">
 
-[![React 19](https://img.shields.io/badge/React-19.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-8.3.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4.19-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.6.0-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/)
-[![Web Audio API](https://img.shields.io/badge/Web_Audio_API-High--Fidelity-FF9900?style=for-the-badge&logo=musicbrainz&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-[![Zero Lint Warnings](https://img.shields.io/badge/Oxlint-0_Errors_0_Warnings-00C853?style=for-the-badge&logo=checkmarx&logoColor=white)](https://oxc.rs/)
+  <img src="./public/aureus-brand-banner.svg" alt="AUREUS VELOCE — The Sovereign Kinetic" width="100%" />
+
+  <br/><br/>
+
+  [![React 19](https://img.shields.io/badge/React-19.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+  [![Vite](https://img.shields.io/badge/Vite-8.3.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4.19-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.6.0-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/)
+  [![Web Audio API](https://img.shields.io/badge/Web_Audio_API-High--Fidelity-FF9900?style=for-the-badge&logo=musicbrainz&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+  [![Zero Lint Warnings](https://img.shields.io/badge/Oxlint-0_Errors_0_Warnings-00C853?style=for-the-badge&logo=checkmarx&logoColor=white)](https://oxc.rs/)
+
+</div>
 
 **AUREUS VELOCE** (The Sovereign Kinetic) is a state-of-the-art, hyper-immersive digital automotive salon engineered for ultra-high-net-worth collectors, supercar enthusiasts, and exotic automotive connoisseurs across India and the global diaspora. 
 

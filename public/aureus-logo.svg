@@ -1,0 +1,100 @@
+<svg width="160" height="160" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 24K Sovereign Gold Linear Gradient -->
+    <linearGradient id="aureusGold" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF4B8" />
+      <stop offset="25%" stop-color="#F5D061" />
+      <stop offset="50%" stop-color="#E5B83A" />
+      <stop offset="75%" stop-color="#B38728" />
+      <stop offset="100%" stop-color="#664C10" />
+    </linearGradient>
+
+    <!-- Platinum Specular Shimmer -->
+    <linearGradient id="aureusShimmer" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#FFF2A1" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#C49622" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Deep Obsidian Core Shield Gradient -->
+    <linearGradient id="aureusCore" x1="60" y1="20" x2="60" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1D24" />
+      <stop offset="60%" stop-color="#0B0C0E" />
+      <stop offset="100%" stop-color="#020304" />
+    </linearGradient>
+
+    <!-- Radial Jewel Glow -->
+    <radialGradient id="aureusCenterGlow" cx="60" cy="55" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFECA8" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#E5B83A" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#E5B83A" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g filter="url(#goldGlow)">
+    <!-- Outer Circular Precision Bezel with Tick Marks -->
+    <circle cx="60" cy="60" r="56" stroke="url(#aureusGold)" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="3 3" />
+    <circle cx="60" cy="60" r="52" stroke="url(#aureusGold)" stroke-width="1.6" stroke-opacity="0.85" />
+
+    <!-- Central Heraldic Shield Backdrop -->
+    <path
+      d="M60 18 L88 34 V66 C88 84 76 98 60 106 C44 98 32 84 32 66 V34 Z"
+      fill="url(#aureusCore)"
+      stroke="url(#aureusGold)"
+      stroke-width="2.2"
+    />
+
+    <!-- Subtle shield inner contour -->
+    <path
+      d="M60 23 L83 37 V64 C83 79 73 91 60 99 C47 91 37 79 37 64 V37 Z"
+      fill="none"
+      stroke="url(#aureusShimmer)"
+      stroke-width="0.8"
+      stroke-opacity="0.4"
+    />
+
+    <!-- === SOVEREIGN EAGLE WINGS (KINETIC FEATHER FOILS) === -->
+    <!-- Left Wing Outer Vane -->
+    <path d="M60 48 C48 34 26 22 4 30 C18 42 32 54 44 64 Z" fill="url(#aureusGold)" opacity="0.95" />
+    <!-- Left Wing Mid Vane -->
+    <path d="M58 56 C44 46 22 40 8 48 C20 57 34 66 46 72 Z" fill="url(#aureusGold)" opacity="0.85" />
+    <!-- Left Wing Lower Vane -->
+    <path d="M56 65 C44 58 26 56 16 64 C26 71 38 76 48 78 Z" fill="url(#aureusGold)" opacity="0.75" />
+
+    <!-- Right Wing Outer Vane -->
+    <path d="M60 48 C72 34 94 22 116 30 C102 42 88 54 76 64 Z" fill="url(#aureusGold)" opacity="0.95" />
+    <!-- Right Wing Mid Vane -->
+    <path d="M62 56 C76 46 98 40 112 48 C100 57 86 66 74 72 Z" fill="url(#aureusGold)" opacity="0.85" />
+    <!-- Right Wing Lower Vane -->
+    <path d="M64 65 C76 58 94 56 104 64 C94 71 82 76 72 78 Z" fill="url(#aureusGold)" opacity="0.75" />
+
+    <!-- === SOVEREIGN EAGLE HEAD & CREST (CENTER) === -->
+    <!-- Sovereign Eagle Crown / Apex Diamond -->
+    <polygon points="60,26 66,35 60,39 54,35" fill="url(#aureusShimmer)" />
+    <polygon points="60,18 64,25 60,28 56,25" fill="url(#aureusGold)" />
+
+    <!-- Eagle Head & Beak Silhouette -->
+    <path
+      d="M60 32 C63 32 67 35 68 39 C72 40 76 43 78 47 C74 48 70 47 67 49 C64 53 60 58 60 62 C60 58 56 53 53 49 C50 47 46 48 42 47 C44 43 48 40 52 39 C53 35 57 32 60 32 Z"
+      fill="url(#aureusShimmer)"
+    />
+
+    <!-- Kinetic Chevron Ribs (V-velocity arrows) -->
+    <path d="M60 66 L72 78 L68 81 L60 73 L52 81 L48 78 Z" fill="url(#aureusGold)" />
+    <path d="M60 76 L68 85 L65 87 L60 82 L55 87 L52 85 Z" fill="url(#aureusGold)" opacity="0.9" />
+    <path d="M60 85 L65 91 L63 93 L60 89 L57 93 L55 91 Z" fill="url(#aureusGold)" opacity="0.75" />
+
+    <!-- Center Jewel Glow -->
+    <circle cx="60" cy="50" r="14" fill="url(#aureusCenterGlow)" />
+    
+    <!-- Piercing Eye Accents -->
+    <circle cx="57" cy="43" r="1.2" fill="#FFFFFF" />
+    <circle cx="63" cy="43" r="1.2" fill="#FFFFFF" />
+  </g>
+</svg>

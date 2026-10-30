@@ -1,0 +1,106 @@
+<svg width="100%" height="240" viewBox="0 0 900 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bannerBg" x1="0" y1="0" x2="900" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050709" />
+      <stop offset="50%" stop-color="#0B0D13" />
+      <stop offset="100%" stop-color="#020305" />
+    </linearGradient>
+
+    <!-- 24K Sovereign Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4B8" />
+      <stop offset="25%" stop-color="#F5D061" />
+      <stop offset="50%" stop-color="#E5B83A" />
+      <stop offset="75%" stop-color="#B38728" />
+      <stop offset="100%" stop-color="#735212" />
+    </linearGradient>
+
+    <!-- Silver Shimmer -->
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#FFEFA8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C49622" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.05" />
+      <stop offset="30%" stop-color="#F5D061" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#FFF4B8" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#F5D061" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Ambient Gold Glow -->
+    <radialGradient id="centerGlow" cx="450" cy="110" r="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E5B83A" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="900" height="240" rx="20" fill="url(#bannerBg)" />
+  <rect width="900" height="240" rx="20" fill="url(#centerGlow)" />
+  <rect x="1" y="1" width="898" height="238" rx="19" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Corner Precision Accents -->
+  <path d="M 24 12 L 12 12 L 12 24" stroke="#F5D061" stroke-width="2" stroke-opacity="0.7" fill="none" />
+  <path d="M 876 12 L 888 12 L 888 24" stroke="#F5D061" stroke-width="2" stroke-opacity="0.7" fill="none" />
+  <path d="M 12 216 L 12 228 L 24 228" stroke="#F5D061" stroke-width="2" stroke-opacity="0.7" fill="none" />
+  <path d="M 888 216 L 888 228 L 876 228" stroke="#F5D061" stroke-width="2" stroke-opacity="0.7" fill="none" />
+
+  <!-- ================= LOGO CREST (CENTERED ABOVE TITLE) ================= -->
+  <g transform="translate(407, 18) scale(0.72)">
+    <!-- Outer Bezel -->
+    <circle cx="60" cy="60" r="56" stroke="url(#goldGrad)" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="3 3" />
+    <circle cx="60" cy="60" r="52" stroke="url(#goldGrad)" stroke-width="1.6" stroke-opacity="0.85" />
+
+    <!-- Shield Core -->
+    <path d="M60 18 L88 34 V66 C88 84 76 98 60 106 C44 98 32 84 32 66 V34 Z" fill="#0E1015" stroke="url(#goldGrad)" stroke-width="2.2" />
+    <path d="M60 23 L83 37 V64 C83 79 73 91 60 99 C47 91 37 79 37 64 V37 Z" fill="none" stroke="url(#shimmer)" stroke-width="0.8" stroke-opacity="0.4" />
+
+    <!-- Wings Left -->
+    <path d="M60 48 C48 34 26 22 4 30 C18 42 32 54 44 64 Z" fill="url(#goldGrad)" opacity="0.95" />
+    <path d="M58 56 C44 46 22 40 8 48 C20 57 34 66 46 72 Z" fill="url(#goldGrad)" opacity="0.85" />
+    <path d="M56 65 C44 58 26 56 16 64 C26 71 38 76 48 78 Z" fill="url(#goldGrad)" opacity="0.75" />
+
+    <!-- Wings Right -->
+    <path d="M60 48 C72 34 94 22 116 30 C102 42 88 54 76 64 Z" fill="url(#goldGrad)" opacity="0.95" />
+    <path d="M62 56 C76 46 98 40 112 48 C100 57 86 66 74 72 Z" fill="url(#goldGrad)" opacity="0.85" />
+    <path d="M64 65 C76 58 94 56 104 64 C94 71 82 76 72 78 Z" fill="url(#goldGrad)" opacity="0.75" />
+
+    <!-- Crown Diamond -->
+    <polygon points="60,26 66,35 60,39 54,35" fill="url(#shimmer)" />
+    <polygon points="60,18 64,25 60,28 56,25" fill="url(#goldGrad)" />
+
+    <!-- Eagle Head & Beak -->
+    <path d="M60 32 C63 32 67 35 68 39 C72 40 76 43 78 47 C74 48 70 47 67 49 C64 53 60 58 60 62 C60 58 56 53 53 49 C50 47 46 48 42 47 C44 43 48 40 52 39 C53 35 57 32 60 32 Z" fill="url(#shimmer)" />
+
+    <!-- Chevrons -->
+    <path d="M60 66 L72 78 L68 81 L60 73 L52 81 L48 78 Z" fill="url(#goldGrad)" />
+    <path d="M60 76 L68 85 L65 87 L60 82 L55 87 L52 85 Z" fill="url(#goldGrad)" opacity="0.9" />
+    <path d="M60 85 L65 91 L63 93 L60 89 L57 93 L55 91 Z" fill="url(#goldGrad)" opacity="0.75" />
+
+    <!-- Eyes -->
+    <circle cx="57" cy="43" r="1.2" fill="#FFFFFF" />
+    <circle cx="63" cy="43" r="1.2" fill="#FFFFFF" />
+  </g>
+
+  <!-- ================= BRAND TYPOGRAPHY ================= -->
+  <!-- Main Title: AUREUS VELOCE -->
+  <text x="450" y="152" text-anchor="middle" font-family="'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="8" fill="#FFFFFF">
+    AUREUS <tspan fill="url(#goldGrad)" font-weight="400">VELOCE</tspan>
+  </text>
+
+  <!-- Subtitle Tagline: THE SOVEREIGN KINETIC -->
+  <text x="450" y="186" text-anchor="middle" font-family="'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12" letter-spacing="6" fill="#F5D061" opacity="0.85">
+    THE SOVEREIGN KINETIC
+  </text>
+
+  <!-- Bottom Descriptor -->
+  <text x="450" y="210" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="11" letter-spacing="3" fill="#94A3B8">
+    CURATED LUXURY &bull; HYPERCARS &bull; EXOTIC AUTOMOTIVE SANCTUARY
+  </text>
+</svg>
