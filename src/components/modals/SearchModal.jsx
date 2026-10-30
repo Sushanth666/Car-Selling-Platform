@@ -209,7 +209,7 @@ export default function SearchModal({
           {/* Quick Filters Row: Category + Price Bracket */}
           <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-white/5 text-xs">
             {/* Category tabs */}
-            <div className="flex items-center gap-1.5 overflow-x-auto">
+            <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none">
               <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mr-1">Silhouette:</span>
               {categories.map((cat) => (
                 <button

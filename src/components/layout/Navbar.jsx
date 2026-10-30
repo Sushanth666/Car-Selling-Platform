@@ -66,7 +66,7 @@ export default function Navbar({
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 scrollbar-none overflow-x-hidden ${
           isScrolled
             ? 'bg-luxury-950/92 backdrop-blur-xl border-b border-white/10 shadow-2xl py-2 sm:py-2.5'
             : 'bg-gradient-to-b from-black/90 via-black/55 to-transparent py-3 sm:py-3.5'
@@ -91,7 +91,7 @@ export default function Navbar({
 
             {/* Center Column: Perfectly Centered Desktop Navigation Pill */}
             <div className="hidden lg:flex items-center justify-center flex-shrink-0">
-              <nav className="flex items-center gap-0.5 xl:gap-1 border border-white/10 rounded-full p-1 bg-luxury-900/80 backdrop-blur-md shadow-xl">
+              <nav className="flex items-center gap-0.5 xl:gap-1 border border-white/10 rounded-full p-1 bg-luxury-900/80 backdrop-blur-md shadow-xl scrollbar-none">
                 {navLinks.map((link) => (
                   <button
                     key={link.id}
