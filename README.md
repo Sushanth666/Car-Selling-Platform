@@ -14,61 +14,126 @@ Crafted with dark luxury glassmorphism, bespoke golden eagle crest iconography, 
 
 ---
 
-## 📸 Visual Showcase & Responsive Previews
+## 📸 Visual Showcase & Multi-Device Previews
 
-### 🖥️ Desktop Experience (1440 × 900)
+All screenshots are categorized into dedicated subdirectories inside the [`screenshots/`](./screenshots/) folder:
 
-#### 1. Cinematic Hero Section & Audio Teaser
-> Featuring 3D typography, live gold ticker, flagship vehicle carousel, and sound telemetry teaser.
-![Apex Atelier Desktop Hero](./screenshots/desktop-hero.png)
-
-#### 2. Grand Automotive Collection & Filter Desk
-> Filter by Marque, Powertrain (PHEV, Atmospheric, EV), Price Slider (₹2 Cr – ₹30 Cr+), and 3D Tilt Cards.
-![Apex Atelier Desktop Collection Gallery](./screenshots/desktop-gallery.png)
-
-#### 3. Vehicle Dossier & Interactive Paint Studio
-> Comprehensive vehicle dossiers with technical specifications, multi-angle interior/exterior gallery, and live body paint customizer.
-![Apex Atelier Desktop Vehicle Dossier](./screenshots/desktop-car-details.png)
-
-#### 4. Apex Drag Strip • 0–100 km/h Head-to-Head Simulator
-> Physics-based launch control telemetry shootout comparing acceleration curves and quarter-mile split times.
-![Apex Atelier Desktop Drag Strip Simulator](./screenshots/desktop-drag-race.png)
-
-#### 5. Atelier Exhaust Sound Lounge & Rev Arena
-> Authentic multi-cylinder acoustic soundboard featuring high-rpm redline revving, dynamic tachometer, and interactive accelerator pedal.
-![Apex Atelier Desktop Exhaust Sound Lounge](./screenshots/desktop-rev-arena.png)
-
-#### 6. Indian On-Road Price & EMI Tax Shield Calculator
-> State-specific RTO rates (MH, KA, TN, KL, DL, TS), 28% GST + luxury cess, 1% TCS, zero-dep cover, and Section 32 corporate depreciation tax shields.
-![Apex Atelier Desktop Finance Desk](./screenshots/desktop-finance-calculator.png)
+```text
+screenshots/
+├── desktop/               # High-Resolution 1536×900 Desktop Workstation Views
+│   ├── 01-hero-section.png
+│   ├── 02-marques-categories.png
+│   ├── 03-collection-gallery.png
+│   ├── 04-car-details-modal.png
+│   ├── 05-drag-race-simulator.png
+│   ├── 06-exhaust-rev-arena.png
+│   ├── 07-finance-calculator.png
+│   ├── 08-atelier-about.png
+│   ├── 09-contact-concierge.png
+│   └── 10-footer.png
+├── tablet/                # iPad & Tablet 820×1180 Responsive Layouts
+│   ├── 01-tablet-hero.png
+│   ├── 02-tablet-marques.png
+│   ├── 03-tablet-gallery.png
+│   ├── 04-tablet-car-details.png
+│   ├── 05-tablet-drag-race.png
+│   ├── 06-tablet-finance-calculator.png
+│   ├── 07-tablet-about.png
+│   └── 08-tablet-contact.png
+└── mobile/                # Mobile Device 390×844 Touch-Optimized Layouts
+    ├── 01-mobile-hero.png
+    ├── 02-mobile-navigation-drawer.png
+    ├── 03-mobile-gallery.png
+    ├── 04-mobile-car-details.png
+    ├── 05-mobile-drag-race.png
+    ├── 06-mobile-rev-arena.png
+    ├── 07-mobile-finance-calculator.png
+    └── 08-mobile-contact.png
+```
 
 ---
 
-### 📱 Tablet Experience (768 × 1024 — iPad)
+### 🖥️ Desktop Experience (`screenshots/desktop/`)
 
-#### 1. Tablet Hero & Brand Marquee
-> Fluid scaling with optimized touch targets and luxury typography.
-![Apex Atelier Tablet Hero](./screenshots/tablet-hero.png)
+#### 1. Cinematic Hero Section & Sovereign Eagle Crest
+> Featuring the 24K Sovereign Golden Eagle Crest placed strictly above the **AUREUS VELOCE** title, live telemetry HUD, audio rev trigger, and ex-showroom price banner.
+![Aureus Veloce Desktop Hero](./screenshots/desktop/01-hero-section.png)
 
-#### 2. Tablet Responsive 2-Column Collection Grid
+#### 2. Automotive Marques & Heritage Classification
+> Filter and browse allocations from legendary European houses (Porsche, Ferrari, Lamborghini, Rolls-Royce, Bugatti, McLaren).
+![Aureus Veloce Desktop Marques](./screenshots/desktop/02-marques-categories.png)
+
+#### 3. Grand Automotive Fleet Gallery & Filter Desk
+> Filter by Marque, Powertrain (PHEV, Naturally Aspirated, EV), Price Slider (₹2 Cr – ₹30 Cr+), and interactive 3D Tilt Cards.
+![Aureus Veloce Desktop Collection Gallery](./screenshots/desktop/03-collection-gallery.png)
+
+#### 4. Vehicle Dossier & Real-Time Paint Studio Modal
+> Full technical specifications, multi-angle interior/exterior gallery, and interactive real-time canvas body paint booth.
+![Aureus Veloce Desktop Vehicle Dossier](./screenshots/desktop/04-car-details-modal.png)
+
+#### 5. Aureus Drag Strip • 0–100 km/h Head-to-Head Telemetry Shootout
+> Physics-based launch control simulator comparing acceleration curves, quarter-mile split times, and speed trajectories.
+![Aureus Veloce Desktop Drag Strip Simulator](./screenshots/desktop/05-drag-race-simulator.png)
+
+#### 6. Exhaust Sound Lounge & Acoustic Rev Arena
+> Authentic multi-cylinder acoustic soundboard featuring high-rpm redline revving, dynamic analog tachometer, and interactive accelerator pedal.
+![Aureus Veloce Desktop Exhaust Sound Lounge](./screenshots/desktop/06-exhaust-rev-arena.png)
+
+#### 7. Indian On-Road Price & EMI Corporate Tax Shield Calculator
+> State-specific RTO rates (MH, KA, TN, KL, DL, TS), 28% GST + luxury cess, 1% TCS, zero-dep cover, and Section 32 corporate depreciation write-offs.
+![Aureus Veloce Desktop Finance Desk](./screenshots/desktop/07-finance-calculator.png)
+
+#### 8. Sovereign Atelier Heritage & 15-Hypercar Showcase
+> Narrative story highlighting 150-Point ARAI Provenance, Pan-India hydraulic transit, and factory allocation privileges.
+![Aureus Veloce Desktop Atelier Heritage](./screenshots/desktop/08-atelier-about.png)
+
+#### 9. VIP Concierge Desk & Pan-India Salon Suites
+> Booking portal with preferred Indian city selection (Mumbai BKC, Delhi Aerocity, Bengaluru UB City, Hyderabad, Chennai).
+![Aureus Veloce Desktop Concierge Desk](./screenshots/desktop/09-contact-concierge.png)
+
+#### 10. Sovereign Footer & Private Circle Induction
+> Official registered company credentials, discretion agreements, and confidential newsletter subscription.
+![Aureus Veloce Desktop Footer](./screenshots/desktop/10-footer.png)
+
+---
+
+### 📱 Tablet Experience (`screenshots/tablet/`)
+
+#### 1. Tablet Hero Section & Navigation
+> Adaptive touch navigation pill, responsive typography, and golden eagle brand crest.
+![Aureus Veloce Tablet Hero](./screenshots/tablet/01-tablet-hero.png)
+
+#### 2. Tablet 2-Column Responsive Collection Grid
 > Clean 2-column card layout with quick-action spec overlays, brand badges, and currency selector.
-![Apex Atelier Tablet Collection Gallery](./screenshots/tablet-gallery.png)
+![Aureus Veloce Tablet Collection Gallery](./screenshots/tablet/03-tablet-gallery.png)
 
-#### 3. Tablet Vehicle Details Modal
-> Full-height responsive modal with multi-angle gallery, color swatch pills, and booking CTA.
-![Apex Atelier Tablet Vehicle Details](./screenshots/tablet-details-modal.png)
+#### 3. Tablet Vehicle Details Modal & Paint Booth
+> Touch-friendly swatch selectors, multi-view studio photos, and instant Monroney spec sheet viewer.
+![Aureus Veloce Tablet Vehicle Details](./screenshots/tablet/04-tablet-car-details.png)
+
+#### 4. Tablet Drag Race & Interactive Simulators
+> Responsive telemetry dials, lane selection, and stage countdown lights optimized for tablets.
+![Aureus Veloce Tablet Drag Race](./screenshots/tablet/05-tablet-drag-race.png)
 
 ---
 
-### 📲 Mobile Experience (390 × 844 — iPhone)
+### 📲 Mobile Experience (`screenshots/mobile/`)
 
-| Mobile Hero & Sticky Nav | Mobile Navigation Drawer |
+| Mobile Hero & Brand Header | Mobile Navigation Drawer |
 | :---: | :---: |
-| ![Mobile Hero](./screenshots/mobile-hero.png) | ![Mobile Drawer](./screenshots/mobile-navigation-drawer.png) |
+| ![Mobile Hero](./screenshots/mobile/01-mobile-hero.png) | ![Mobile Drawer](./screenshots/mobile/02-mobile-navigation-drawer.png) |
 
-| Mobile Fleet Gallery | Mobile Vehicle Dossier |
+| Mobile Single-Column Fleet | Mobile Vehicle Dossier & Paint Customizer |
 | :---: | :---: |
-| ![Mobile Fleet](./screenshots/mobile-gallery.png) | ![Mobile Vehicle Dossier](./screenshots/mobile-details-modal.png) |
+| ![Mobile Fleet](./screenshots/mobile/03-mobile-gallery.png) | ![Mobile Vehicle Dossier](./screenshots/mobile/04-mobile-car-details.png) |
+
+| Mobile 0–100 km/h Drag Strip | Mobile Exhaust Rev Lounge |
+| :---: | :---: |
+| ![Mobile Drag Strip](./screenshots/mobile/05-mobile-drag-race.png) | ![Mobile Rev Arena](./screenshots/mobile/06-mobile-rev-arena.png) |
+
+| Mobile EMI & On-Road Calculator | Mobile VIP Concierge & WhatsApp Widget |
+| :---: | :---: |
+| ![Mobile Calculator](./screenshots/mobile/07-mobile-finance-calculator.png) | ![Mobile Contact](./screenshots/mobile/08-mobile-contact.png) |
 
 ---
 

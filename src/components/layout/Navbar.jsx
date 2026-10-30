@@ -11,6 +11,8 @@ export default function Navbar({
   onOpenBooking,
   activeSection,
   setActiveSection,
+  searchQuery = '',
+  setSearchQuery,
   onOpenSearchModal,
   currentCurrency = "INR",
   onCurrencyChange,
